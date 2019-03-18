@@ -65,7 +65,8 @@ let css = _ => gulp
 let js = _ => gulp
   .src(paths.js.src)
   .pipe(gulpif(isProd, uglify()))
-  .pipe(gulpif(isProd, concat('scripts.min.js')))
+//  .pipe(gulpif(isProd, concat('scripts.min.js')))
+  .pipe(concat('scripts.min.js'))
   .pipe(gulp.dest(paths.js.dist))
 ;
 let image = _ => gulp
