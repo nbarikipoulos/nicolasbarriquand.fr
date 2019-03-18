@@ -1,0 +1,23 @@
+mixin services(data)
+
+    section(
+      class='section',
+      id=data.nav.anchor
+    )
+
+      +sectionTitle(data['title'], data['subtitle'])
+
+      div(class='container subsection')
+        - let i = 0;
+        - let nbCol = 2;
+        - let services = data.parts.slice();
+        while 0 < services.length
+          - let row = services.splice(0,nbCol)
+          div(class='columns')
+            each service in row 
+              div(class='column is-6')
+                div(class='box')
+                  h4(class='title is-5') 
+                    +icon(service['icon'],'icon','has-text-link')
+                    span  #{service['title']}
+                  //- p #{service['desc']}

@@ -1,0 +1,24 @@
+mixin navigation(navs)
+  nav(class='navbar is-link is-fixed-top')
+    div(class='navbar-brand')
+      div(
+        class='navbar-burger burger',
+        data-target='navbarMenu'
+      )
+        span
+        span
+        span
+    div(
+      id='navbarMenu',
+      class='navbar-menu'
+    )
+      div(class='navbar-end')
+        each nav in navs
+          a(
+            class='navbar-item',
+            href = `#${nav['anchor']}`,
+            onclick = 'closeBurger()'
+          )
+            +icon(nav['item.icon'])
+            span #{nav['item.name']}
+    

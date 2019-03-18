@@ -1,0 +1,14 @@
+//- icon: fontawsome icon
+//- [clazz='icon']: span container class
+//- color='': color class
+mixin icon(icon, clazz='icon', color='')
+  span(class=`${clazz} ${color}`)
+    i(class=icon)
+
+//- title: section title
+//- subtitle: section subtitle
+mixin sectionTitle(title, subtitle)
+  div(class='section-heading')
+    h1(class='title is-2') #{title}
+    if subtitle
+      p(class='subtitle is-5') #{subtitle}
