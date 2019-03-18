@@ -1,0 +1,39 @@
+.subsection {
+  margin-top: 4em;
+}
+
+.section-heading {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.card {overflow:hidden;}
+.card.large {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: initial;
+  border-radius: 3px;
+}
+
+.card-content-project {
+  height:200px;
+  max-height:200px;
+  overflow: hidden;
+  text-overflow: "...";
+}
+
+.project-footer {
+    padding: 5px;
+  }
+
+  .is-shady {
+    animation: flyintoright .4s backwards;
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+    transition: all .2s ease-in-out;
+  }
+  
+ .is-shady:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+ }
