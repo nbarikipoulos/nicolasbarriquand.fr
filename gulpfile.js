@@ -7,6 +7,7 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
+  sass = require('gulp-sass'),
   cleanCSS = require('gulp-clean-css'),
   del = require('del'),
   gulpif = require('gulp-if'),
@@ -31,8 +32,8 @@ const src = 'src';
 const dist = 'dist';
 
 const paths = {
-  styles: {
-    src: `${src}/styles/**/*.css`,
+  sass: {
+    src: `${src}/sass/**/*.scss`,
     dist: `${dist}/css`
   },
   images: {
@@ -57,11 +58,12 @@ const paths = {
 // TASKS
 //////////////////////
 
-let css = _ => gulp
-  .src(paths.styles.src)
-  .pipe(gulpif(isProd, cleanCSS()))
-  .pipe(gulp.dest(paths.styles.dist))
-;
+let css = _ => gulp.src(paths.sass.src)
+.pipe(sass())
+.pipe(gulpif(isProd, cleanCSS()))
+.pipe(rename('style.css'))
+.pipe(gulp.dest(paths.sass.dist));
+
 let js = _ => gulp
   .src(paths.js.src)
   .pipe(gulpif(isProd, uglify()))
