@@ -9,6 +9,7 @@ const gulp = require('gulp'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
   cleanCSS = require('gulp-clean-css'),
+  imagemin = require('gulp-imagemin'),
   del = require('del'),
   gulpif = require('gulp-if'),
   cipherJSON = require('gulp-cipher-json')
@@ -73,6 +74,7 @@ let js = _ => gulp
 ;
 let image = _ => gulp
   .src(paths.images.src)
+  .pipe(imagemin([imagemin.jpegtran({progressive: true})]))
   .pipe(gulp.dest(paths.images.dist))
 ;
 
