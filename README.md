@@ -17,7 +17,7 @@
 
 ## Credits
 
-- Nicolas Barriquand ([nbarriquand](https://github.com/nbarriquand))
+- Nicolas Barriquand ([nbarikipoulos](https://github.com/nbarikipoulos))
 
 ## License
 
