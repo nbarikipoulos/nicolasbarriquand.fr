@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nicolas Bariquand",
+  "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
   "devDependencies": {
     "bulma": "^0.7.4",
@@ -23,5 +23,9 @@
     "minimist": "^1.2.0",
     "node-sass": "^4.11.0",
     "pug": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nbarikipoulos/barriquand.me.git"
   }
 }
