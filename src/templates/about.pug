@@ -44,7 +44,7 @@ mixin skillBar(title, percent)
 
   p #{title}
   progress(
-    class='progress is-radiusless is-link',
+    class='progress is-radiusless is-primary',
     value=percent,
     max='100'
   )
@@ -60,7 +60,7 @@ mixin figures(data)
 //- data {value, label, [image]}
 mixin figure(data)
   div(class='box')
-    span(class='is-size-4 has-text-weight-bold has-text-link') #{data['value']}
+    span(class='is-size-4 has-text-weight-bold has-text-primary') #{data['value']}
     span(class='is-size-6 has-text-weight-bold')  #{data['label']}
     if (data['image'])
       figure(class='is-hidden-touch image is-16by9')

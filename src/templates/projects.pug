@@ -23,7 +23,7 @@ mixin project(project, id)
     - if (hasDetails) clazz+=' is-shady';
     div(class=clazz target=`p${id}`)
       //- Card header
-      div(class='card-header has-background-link')
+      div(class='card-header has-background-primary')
         p(class='card-header-title has-text-white') #{project['position']}
         if hasDetails
           p(class='card-header-icon has-text-white')
@@ -50,7 +50,7 @@ mixin project(project, id)
       footer(class='card-footer project-footer')
         div(class='tags')
           each t in project['tech']
-            span(class='tag is-small is-link') #{t}
+            span(class='tag is-small is-primary') #{t}
     if hasDetails
       +modal(project, id)
 
@@ -60,7 +60,7 @@ mixin modal(project, id)
     div(class='modal-background')
     div(class='modal-card')
       //- Modal header
-      header(class='modal-card-head has-background-link')
+      header(class='modal-card-head has-background-primary')
         p(class='modal-card-title has-text-white') #{project['position']}
         button(class='delete' aria-label='close')
         
@@ -83,4 +83,4 @@ mixin modal(project, id)
       footer(class='modal-card-foot')
         div(class='tags')
           each t in project['tech']
-            span(class='tag is-small is-link') #{t}   
+            span(class='tag is-small is-primary') #{t}   
