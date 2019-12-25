@@ -3,29 +3,54 @@
   "version": "1.0.1",
   "description": "www.barriquand.me",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "serve-dist": "serve dist"
   },
   "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
+  "dependencies": {
+    "buefy": "^0.8.8",
+    "core-js": "^3.6.1",
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
-    "bulma": "^0.7.5",
-    "del": "^4.1.1",
-    "gulp": "^4.0.2",
-    "gulp-cipher-json": "^1.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^6.0.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
-    "minimist": "^1.2.0",
-    "node-sass": "^4.12.0",
-    "pug": "^2.0.4"
+    "@vue/cli-plugin-babel": "^4.1.1",
+    "@vue/cli-plugin-eslint": "^4.1.1",
+    "@vue/cli-service": "^4.1.1",
+    "@vue/eslint-config-standard": "^5.0.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.0.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "serve": "^11.2.0",
+    "standard": "^14.3.1",
+    "vue-template-compiler": "^2.6.11"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nbarikipoulos/barriquand.me.git"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/standard"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
