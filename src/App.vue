@@ -2,12 +2,14 @@
   div(id="app")
     Home(:data="getSectionData('home')")
     About(:data="getSectionData('about')")
+    Service(:data="getSectionData('services')")
 </template>
 
 <script>
 
 import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
+import Service from '@/components/Service.vue'
 
 import json from '@/data/data.json'
 
@@ -15,7 +17,8 @@ export default {
   name: 'app',
   components: {
     Home,
-    About
+    About,
+    Service
   },
   data () { return { data: json } },
   methods: {
