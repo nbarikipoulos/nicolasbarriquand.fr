@@ -32,7 +32,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     // text-align: center;
     color: #2c3e50;
-    margin: 5px;
+    // margin: 5px;
   }
 
   $primary: hsl(217, 71%, 53%); //rgb(36, 9, 9);
