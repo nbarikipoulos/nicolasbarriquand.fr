@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-  name: 'Service',
+  name: 'Services',
   props: { data: {} },
   methods: {
     getText (id) { return this.data.text[id] }
