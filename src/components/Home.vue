@@ -2,11 +2,11 @@
   section(
     class="hero is-primary is-fullheight is-fullheight-with-navbar"
   )
-    div(class='hero-body')
-      div(class='container')
+    div(class="hero-body")
+      div(class="container")
         p {{ getText('hero.pre.title') }}
-        h1(class='title is-1') {{ getText('hero.title') }}
-        h2(class='subtitle is-3') {{ getText('hero.subtitle') }}
+        h1(class="title is-1") {{ getText('hero.title') }}
+        h2(class="subtitle is-3") {{ getText('hero.subtitle') }}
 </template>
 <script>
 export default {
