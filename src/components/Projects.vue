@@ -6,7 +6,7 @@
 
     div(class="container subsection")
       div(class="columns is-multiline")
-        div(v-for="project in projects" class="column is-6")
+        div(v-for="project in projects" class="column is-half")
           Project(:data="project")
 </template>
 <script>
