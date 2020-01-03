@@ -12,7 +12,7 @@
         ul(class="fa-ul")
           li
             b-icon(class="fa-li" pack="fa" icon="building")
-            span(class='has-text-weight-bold')  {{ data['company'] }}
+            span(class="has-text-weight-bold")  {{ data['company'] }}
           li
             b-icon(class="fa-li" pack="fa" icon="city")
             span {{ data['location'] }}
@@ -33,11 +33,11 @@
     b-modal(:active.sync="isModalActive" has-modal-card)
       div(class="modal-card")
 
-        header(class='modal-card-head has-background-primary')
-          p(class='modal-card-title has-text-white') {{ data['position'] }}
-          //- button(class='delete' aria-label='close')
+        header(class="modal-card-head has-background-primary")
+          p(class="modal-card-title has-text-white") {{ data['position'] }}
+          //- button(class="delete" aria-label="close")
 
-        section(class='modal-card-body')
+        section(class="modal-card-body")
           div(v-for="detail in data['details']" class="box has-text-justified")
             h4(class="title is-5")
               p {{ detail['title'] }}
@@ -46,7 +46,7 @@
                 b-icon(class="fa-li" pack="fa" icon="angle-right")
                 span {{ element }}
 
-        footer(class='modal-card-foot')
+        footer(class="modal-card-foot")
           b-taglist
             b-tag(v-for="tag in data['tech']" type="is-primary") {{ tag }}
 </template>
