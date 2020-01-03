@@ -4,6 +4,7 @@
     About(:data="getSectionData('about')")
     Services(:data="getSectionData('services')")
     Projects(:data="getSectionData('projects')")
+    Contact(:data="getSectionData('contact')")
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
 import Services from '@/components/Services.vue'
 import Projects from '@/components/Projects.vue'
+import Contact from '@/components/Contact.vue'
 
 import json from '@/data/data.json'
 
@@ -21,7 +23,8 @@ export default {
     Home,
     About,
     Services,
-    Projects
+    Projects,
+    Contact
   },
   data () { return { data: json } },
   methods: {
