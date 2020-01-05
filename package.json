@@ -1,6 +1,6 @@
 {
   "name": "www.barriquand.me",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "www.barriquand.me",
   "scripts": {
     "serve": "vue-cli-service serve",
