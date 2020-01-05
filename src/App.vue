@@ -54,12 +54,12 @@ export default {
     -moz-osx-font-smoothing: grayscale;
   }
 
-  @import "@/sass/my.scss";
+  @import "@/assets/styles/my.scss";
 
   @import "~bulma/sass/utilities/_all";
   @import "~bulma";
   @import "~buefy/src/scss/buefy";
 
-  @import "@/sass/my.sass";
+  @import "@/assets/styles/my.sass";
 
 </style>
