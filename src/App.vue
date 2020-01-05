@@ -1,5 +1,11 @@
 <template lang="pug">
   div(id="app")
+    b-navbar(type="is-primary" fixed-top)
+      template(slot="end")
+        b-navbar-item(
+          v-for="item in getNavItems()"
+          :href="'#' + item['anchor']"
+        ) {{ item['item.name'] }}
     Home(:data="getSectionData('home')")
     About(:data="getSectionData('about')")
     Services(:data="getSectionData('services')")
@@ -31,7 +37,13 @@ export default {
   },
   data () { return { data: json } },
   methods: {
-    getSectionData (name) { return json.sections[name] }
+    getSectionData (name) { return json.sections[name] },
+    getNavItems () {
+      const sections = this.data.sections
+      return Object.keys(sections)
+        .map(key => sections[key].nav)
+        .filter(elt => undefined !== elt)
+    }
   }
 }
 </script>
@@ -44,7 +56,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     // text-align: center;
     color: #2c3e50;
-    // margin: 5px;
   }
 
   $primary: hsl(217, 71%, 53%); //rgb(36, 9, 9);
