@@ -49,20 +49,12 @@ export default {
 </script>
 
 <style lang="scss">
-  @charset "utf-8";
-
   #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // text-align: center;
-    color: #2c3e50;
   }
 
-  $primary: hsl(217, 71%, 53%); //rgb(36, 9, 9);
-
-  $footer-background-color: $primary;
-  $footer-color: rgb(255,255,255);
-  $footer-padding: 5px;
+  @import "@/sass/my.scss";
 
   @import "~bulma/sass/utilities/_all";
   @import "~bulma";

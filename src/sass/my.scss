@@ -5,7 +5,7 @@
 $primary: hsl(217, 71%, 53%); //rgb(36, 9, 9);
 $bg: rgb(236, 236, 236);// hsl(0, 100%, 2%);
 
-$text-color: black;
+$text-color: #2c3e50;
 
 $text: $text-color;
 
@@ -23,7 +23,10 @@ $link: $primary;
 $progress-value-background-color: $primary;
 
 $box-background-color: $bg;
-//$box-shadow: 0 2px 3px $shadow-color, 0 0 0 1px $shadow-color;
+
+$footer-background-color: $primary;
+$footer-color: rgb(255,255,255);
+$footer-padding: 5px;
 
 $card-background-color: $bg;
 $card-footer-border-top: 1px solid $primary;
@@ -36,6 +39,3 @@ $modal-card-foot-border-top: 1px solid $primary;
 
 $success: green;
 $danger: red;
-
-@import "myBulma.sass";
-@import "my.sass";
