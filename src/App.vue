@@ -5,6 +5,7 @@
     Services(:data="getSectionData('services')")
     Projects(:data="getSectionData('projects')")
     Contact(:data="getSectionData('contact')")
+    Footer(:data="data['footer']")
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import About from '@/components/About.vue'
 import Services from '@/components/Services.vue'
 import Projects from '@/components/Projects.vue'
 import Contact from '@/components/Contact.vue'
+import Footer from '@/components/Footer.vue'
 
 import json from '@/data/data.json'
 
@@ -24,7 +26,8 @@ export default {
     About,
     Services,
     Projects,
-    Contact
+    Contact,
+    Footer
   },
   data () { return { data: json } },
   methods: {
@@ -46,10 +49,14 @@ export default {
 
   $primary: hsl(217, 71%, 53%); //rgb(36, 9, 9);
 
+  $footer-background-color: $primary;
+  $footer-color: rgb(255,255,255);
+  $footer-padding: 5px;
+
   @import "~bulma/sass/utilities/_all";
   @import "~bulma";
   @import "~buefy/src/scss/buefy";
 
-  @import "@/sass/my.sass"
+  @import "@/sass/my.sass";
 
 </style>
