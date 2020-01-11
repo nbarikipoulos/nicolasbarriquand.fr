@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "description": "www.barriquand.me",
   "scripts": {
+    "cipher": "cipher-json cipher ./src/data/*.json",
+    "decipher": "cipher-json decipher ./src/data/*.cjson",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "serve-dist": "serve dist"
@@ -22,6 +24,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.0.1",
+    "json-cipher-value": "^1.2.0",
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
