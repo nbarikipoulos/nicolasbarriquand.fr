@@ -14,8 +14,6 @@
             div(v-for="item in data['skill.bars']")
               p {{ item.name }}
               b-progress(
-                class="is-radiusless"
-                type="is-primary"
                 :value="item.percent",
                 :max=100
                 size="is-medium"
