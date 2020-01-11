@@ -49,11 +49,6 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   @import "@/assets/styles/my.scss";
 
   @import "~bulma/sass/utilities/_all";
@@ -61,5 +56,4 @@ export default {
   @import "~buefy/src/scss/buefy";
 
   @import "@/assets/styles/my.sass";
-
 </style>
