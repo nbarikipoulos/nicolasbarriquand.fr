@@ -9,27 +9,12 @@
 
     div(class="container subsection")
       div(class="columns")
-        //- FIXME to factorize
-        div(class="column is-half has-text-justified")
-          p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
-          ul(class="fa-ul")
-            li(v-for="item in data['skill.text']['ok']['items']")
-              b-icon( class="fa-li" pack="fa" icon="check" type="is-success")
-              p {{ item }}
-        div(class="column is-half has-text-justified")
-          p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
-          ul(class="fa-ul")
-            li(v-for="item in data['skill.text']['ko']['items']")
-              b-icon( class="fa-li" pack="fa" icon="times" type="is-danger")
-              p {{ item }}
-
-    div(class="container subsection")
-      div(class="columns")
         div(class="column is-half")
           p(class="has-text-centered subtitle is-5") {{ data.text['skill.title'] }}
             div(v-for="item in data['skill.bars']")
               p {{ item.name }}
               b-progress(
+                class="is-radiusless"
                 type="is-primary"
                 :value="item.percent",
                 :max=100
@@ -64,6 +49,22 @@
                   ) {{ data['figures']['client']['label'] }}
                     div(class="image is-16by9")
                       img(src="@/assets/pig.gif")
+
+    div(class="container subsection")
+      div(class="columns")
+        //- FIXME to factorize
+        div(class="column is-half has-text-justified")
+          p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
+          ul(class="fa-ul")
+            li(v-for="item in data['skill.text']['ok']['items']")
+              b-icon( class="fa-li" pack="fa" icon="check" type="is-success")
+              p {{ item }}
+        div(class="column is-half has-text-justified")
+          p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
+          ul(class="fa-ul")
+            li(v-for="item in data['skill.text']['ko']['items']")
+              b-icon( class="fa-li" pack="fa" icon="times" type="is-danger")
+              p {{ item }}
 </template>
 <script>
 export default {
