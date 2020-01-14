@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer(class='footer')
+  footer(class='section' class='footer')
     div(class='content')
       div(class='columns is-vcentered is-marginless')
         div(class='column is-full')

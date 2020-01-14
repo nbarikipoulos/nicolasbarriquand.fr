@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(id="app")
+  div(id="app" class="is-unselectable")
     b-navbar(type="is-primary" fixed-top)
       template(slot="end")
         b-navbar-item(
