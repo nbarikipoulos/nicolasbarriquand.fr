@@ -4,8 +4,8 @@
       h1(class="title is-2") {{ data.title }}
       //- p(class="subtitle is-5") {{ data.subtitle }}
 
-    //- div(class="container subsection")
-    //-   p(class="has-text-justified") {{ data.intro }}
+    div(class="container subsection")
+      p(class="has-text-justified") {{ data.intro }}
 
     div(class="container subsection")
       div(class="columns")
