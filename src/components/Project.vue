@@ -31,15 +31,15 @@
     //- Modal (aka project details)
     //- -----
     b-modal(:active.sync="isModalActive" has-modal-card)
-      div(class="modal-card")
+      div(class="modal-card" has)
 
         header(class="modal-card-head has-background-primary")
-          p(class="modal-card-title has-text-white") {{ data['position'] }}
+          div(class='has-text-weight-bold  has-text-centered  has-text-white') {{ data['position'] }}
           //- button(class="delete" aria-label="close")
 
         section(class="modal-card-body")
           div(v-for="detail in data['details']" class="box has-text-justified")
-            h4(class="title is-5")
+            h4(class="title is-6")
               p {{ detail['title'] }}
             ul(v-if="detail['elements']" class="fa-ul")
               li(v-for="element in detail['elements']")
