@@ -35,15 +35,19 @@
     //- Modal (aka project details)
     //- -----
     b-modal(:active.sync="isModalActive" has-modal-card)
-      div(class="modal-card")
+      div(class="modal-card" @click="closeModal")
 
         header(class="modal-card-head")
-          p(class='modal-card-title') {{ data['position'] }}
-          //- button(
-          //-   class="delete is-primary"
-          //-   aria-label="close" @click="closeModal"
-          //- )
-
+          div(class='modal-card-title is-1') {{ data['position'] }}
+          b-button(
+              class="is-pulled-right"
+              size="is-medium"
+              type="is-black"
+              rounded
+              icon-pack="fa"
+              icon-left="times"
+              @click="closeModal"
+          )
         section(class="modal-card-body")
           div(
             v-for="detail in data['details']"
@@ -79,6 +83,9 @@ export default {
       if (this.hasDetail) {
         this.isModalActive = true
       }
+    },
+    closeModal () {
+      this.isModalActive = false
     }
   }
 }

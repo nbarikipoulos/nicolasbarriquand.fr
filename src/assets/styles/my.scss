@@ -51,8 +51,9 @@ $modal-background-background-color: rgba(white, 0.85);
 $modal-card-head-background-color: black;
 $modal-card-title-color: $primary; //$text-color-card-head;
 $modal-card-head-border-bottom: 1px solid $primary; 
-$modal-card-body-background-color: black;
+$modal-card-body-background-color: white;
 $modal-card-foot-border-top: 1px solid $primary;
+$modal-close-right: -25px; // i.e. out of screen
 
 $footer-background-color: black;
 $footer-color: $primary;
