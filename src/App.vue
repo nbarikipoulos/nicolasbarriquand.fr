@@ -4,6 +4,7 @@
       template(slot="end")
         b-navbar-item(
           v-for="item in getNavItems()"
+          class="has-text-primary"
           :href="'#' + item['anchor']"
         ) {{ item['item.name'] }}
     Home(:data="getSectionData('home')")

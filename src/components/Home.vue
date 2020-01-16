@@ -1,12 +1,12 @@
 <template lang="pug">
   section(
-    class="hero is-small is-white"
+    class="hero is-small is-black"
   )
     div(class="hero-body")
       div(class="container")
-        p {{ getText('hero.pre.title') }}
-        h1(class="title is-2") {{ getText('hero.title') }}
-        h2(class="subtitle is-3") {{ getText('hero.subtitle') }}
+        p(class="has-text-white") {{ getText('hero.pre.title') }}
+        h1(class="title is-2 has-text-primary") {{ getText('hero.title') }}
+        h2(class="subtitle is-3 has-text-white") {{ getText('hero.subtitle') }}
 </template>
 <script>
 export default {

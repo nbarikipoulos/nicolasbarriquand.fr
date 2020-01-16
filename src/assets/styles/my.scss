@@ -2,7 +2,7 @@
 
 // My variables
 
-$primary-color: green; // rgb(36, 139, 82); // hsl(217, 71%, 53%); //rgb(36, 9, 9);
+$primary-color: rgb(231, 100, 13); // rgb(36, 139, 82); // hsl(217, 71%, 53%); //rgb(36, 9, 9);
 
 $bg: white; // hsl(0, 100%, 2%);
 $text-color: black;
@@ -46,16 +46,16 @@ $card-footer-border-top: 1px solid $primary;
 $card-shadow: $shadow;
 $card-footer-background-color: $bg-card-footer;
 
-$modal-background-background-color: rgba(black, 0.75);
+$modal-background-background-color: rgba(white, 0.85);
 
-$modal-card-head-background-color: white;
+$modal-card-head-background-color: black;
 $modal-card-title-color: $primary; //$text-color-card-head;
 $modal-card-head-border-bottom: 1px solid $primary; 
-$modal-card-body-background-color: $bg;
+$modal-card-body-background-color: black;
 $modal-card-foot-border-top: 1px solid $primary;
 
 $footer-background-color: black;
-$footer-color: white;
+$footer-color: $primary;
 $footer-padding: 5px;
 
 $success: green;
