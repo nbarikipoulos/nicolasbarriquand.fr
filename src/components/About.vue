@@ -5,7 +5,8 @@
       //- p(class="subtitle is-5") {{ data.subtitle }}
 
     div(class="container subsection")
-      p(class="has-text-centered") {{ data.intro }}
+      div(class="box")
+        p(class="has-text-centered is-size-5 has-text-primary") {{ data.intro }}
 
     div(class="container subsection")
       div(class="tile is-ancestor")
