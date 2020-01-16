@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer(class='section' class='footer')
+  footer(class='footer')
     div(class='content')
       div(class='columns is-vcentered is-marginless')
         div(class='column is-full')
@@ -10,7 +10,7 @@
             target="_blank"
           )
             img(
-              src="https://bulma.io/images/made-with-bulma.png",
+              src="https://bulma.io/images/made-with-bulma--dark.png",
               alt="Made with Bulma" width="128" height="24"
             )
 </template>

@@ -4,25 +4,25 @@
     //- Card
     //- -----
     div(class="card" :class="{ 'is-shady': hasDetail }" @click="openModal")
-      div(class="card-header has-background-primary")
-        p(class="card-header-title has-text-white") {{ data['position'] }}
-        p(v-if="hasDetail" class="card-header-icon has-text-white")
-          b-icon(pack="fa" icon="ellipsis-h")
+      div(class="card-header")
+        p(class="card-header-title") {{ data['position'] }}
+        p(v-if="hasDetail" class="card-header-icon")
+          b-icon(pack="fa" icon="ellipsis-h has-text-primary")
       div(class="card-content card-content-project")
         ul(class="fa-ul")
           li
-            b-icon(class="fa-li" pack="fa" icon="building")
-            span(class="has-text-weight-bold")  {{ data['company'] }}
+            b-icon(class="fa-li" pack="fa" icon="building" type="is-primary")
+            span {{ data['company'] }}
           li
-            b-icon(class="fa-li" pack="fa" icon="city")
+            b-icon(class="fa-li" pack="fa" icon="city" type="is-primary")
             span {{ data['location'] }}
           li
-            b-icon(class="fa-li" pack="fa" icon="calendar-alt")
+            b-icon(class="fa-li" pack="fa" icon="calendar-alt" type="is-primary")
             span {{ data['date'] }}
         br
         ul(class="fa-ul")
           li(class="has-text-justified")
-            b-icon(class="fa-li" pack="fa" icon="hammer")
+            b-icon(class="fa-li" pack="fa" icon="hammer" type="is-primary")
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
         b-taglist
@@ -31,10 +31,10 @@
     //- Modal (aka project details)
     //- -----
     b-modal(:active.sync="isModalActive" has-modal-card)
-      div(class="modal-card" has)
+      div(class="modal-card")
 
-        header(class="modal-card-head has-background-primary")
-          div(class='has-text-weight-bold  has-text-centered  has-text-white') {{ data['position'] }}
+        header(class="modal-card-head")
+          p(class='modal-card-title') {{ data['position'] }}
           //- button(class="delete" aria-label="close")
 
         section(class="modal-card-body")
