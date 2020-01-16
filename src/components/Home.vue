@@ -1,6 +1,6 @@
 <template lang="pug">
   section(
-    class="hero is-fullheight-with-navbar is-black"
+    class="hero is-small is-white"
   )
     div(class="hero-body")
       div(class="container")

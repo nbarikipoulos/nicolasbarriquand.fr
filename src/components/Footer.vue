@@ -10,7 +10,7 @@
             target="_blank"
           )
             img(
-              src="https://bulma.io/images/made-with-bulma--dark.png",
+              src="https://bulma.io/images/made-with-bulma--semiwhite.png",
               alt="Made with Bulma" width="128" height="24"
             )
 </template>

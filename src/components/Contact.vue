@@ -5,17 +5,17 @@
       p(class="subtitle is-5") {{ data.subtitle }}
 
     div(class='container subsection is-size-6')
-      div(class='columns is-centered')
-        div(class='column is-8')
-          div(class='columns is-vcentered')
-            div(class='column is-6')
-              figure(class='image is-16by9')
-                img(src="@/assets/location.jpg")
-            div(class='column is-6')
-              p(v-for="item in data['items']")
-                b-icon(pack="fa" :icon="item['icon']" type="is-primary")
-                span &nbsp;&nbsp;{{ item['type']}}&nbsp;&nbsp;
-                span(v-html="item['value']")
+        div(class='columns is-centered')
+          div(class='column is-8')
+            div(class='columns is-vcentered')
+              div(class='column is-6')
+                figure(class='image is-16by9')
+                  img(src="@/assets/location.jpg")
+              div(class='column is-6')
+                p(v-for="item in data['items']")
+                  b-icon(pack="fa" :icon="item['icon']" type="is-primary")
+                  span &nbsp;&nbsp;{{ item['type']}}&nbsp;&nbsp;
+                  span(v-html="item['value']")
 </template>
 <script>
 
