@@ -5,25 +5,7 @@
       //- p(class="subtitle is-5") {{ data.subtitle }}
 
     div(class="container subsection")
-      p(class="has-text-centered is-size-6 has-text-black") {{ data.intro }}
-
-    div(class="container subsection")
-      div(class="tile is-ancestor")
-        //- FIXME to factorize
-        div(class="tile is-parent is-half has-text-justified")
-          div(class="tile is-child box")
-            p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
-            ul(class="fa-ul")
-              li(v-for="item in data['skill.text']['ok']['items']")
-                b-icon( class="fa-li" pack="fa" icon="check" type="is-success")
-                p {{ item }}
-        div(class="tile is-parent is-half has-text-justified")
-          div(class="tile is-child box")
-            p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
-            ul(class="fa-ul")
-              li(v-for="item in data['skill.text']['ko']['items']")
-                b-icon( class="fa-li" pack="fa" icon="times" type="is-danger")
-                p {{ item }}
+      p(class="has-text-justified is-size-6 has-text-black") {{ data.intro }}
 
     div(class="container subsection")
       div(class="tile is-ancestor")
@@ -67,6 +49,24 @@
                     )  {{ data['figures']['client']['label'] }}
                       div(class="image is-16by9")
                         img(src="@/assets/pig.gif")
+
+    div(class="container subsection")
+      div(class="tile is-ancestor")
+        //- FIXME to factorize
+        div(class="tile is-parent is-half has-text-justified")
+          div(class="tile is-child box")
+            p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
+            ul(class="fa-ul")
+              li(v-for="item in data['skill.text']['ok']['items']")
+                b-icon( class="fa-li" pack="fa" icon="check" type="is-success")
+                p {{ item }}
+        div(class="tile is-parent is-half has-text-justified")
+          div(class="tile is-child box")
+            p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
+            ul(class="fa-ul")
+              li(v-for="item in data['skill.text']['ko']['items']")
+                b-icon( class="fa-li" pack="fa" icon="times" type="is-danger")
+                p {{ item }}
 </template>
 <script>
 export default {
