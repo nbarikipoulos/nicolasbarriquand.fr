@@ -1,11 +1,11 @@
 <template lang="pug">
-  footer(class='footer')
-    div(class='content')
-      div(class='columns is-vcentered is-marginless')
-        div(class='column is-full')
+  footer(class="footer")
+    div(class="content")
+      div(class="columns is-vcentered is-marginless")
+        div(class="column is-full")
           span {{ data['copy'] }}
           a(
-            class='is-pulled-right',
+            class="is-pulled-right",
             href="https://bulma.io",
             target="_blank"
           )
