@@ -25,14 +25,14 @@
             p(class="has-text-centered subtitle is-5") {{ data.text['figure.title'] }}
               div(class="tile is-ancestor")
                 div(class="tile is-parent is-vertical is-5")
-                  div(class="tile is-child box")
+                  div(class="tile is-child box has-text-centered")
                     span(
                       class="is-size-4 has-text-weight-bold has-text-primary"
                     ) {{ data['figures']['xp']['value'] }}
                     span(
                       class="is-size-6 has-text-weight-bold"
                     )  {{ data['figures']['xp']['label'] }}
-                  div(class="tile is-child box")
+                  div(class="tile is-child box has-text-centered")
                     span(
                       class="is-size-4 has-text-weight-bold has-text-primary"
                     ) {{ data['figures']['project']['value'] }}
