@@ -4,8 +4,13 @@
       h1(class="title is-2") {{ data.title }}
       //- p(class="subtitle is-5") {{ data.subtitle }}
 
-    div(class="container subsection")
-      p(class="has-text-justified is-size-6 has-text-black") {{ data.intro }}
+    div(class="container subsection box")
+      ul(class="fa-ul")
+        li(
+          v-for="line in data['intro']"
+        )
+          b-icon(class="fa-li" pack="fa" icon="chevron-circle-right" type="is-primary")
+          span(class="is-size-5") {{ line }}
 
     div(class="container subsection")
       div(class="tile is-ancestor")
@@ -58,14 +63,14 @@
             p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
             ul(class="fa-ul")
               li(v-for="item in data['skill.text']['ok']['items']")
-                b-icon( class="fa-li" pack="fa" icon="check" type="is-success")
+                b-icon( class="fa-li" pack="fa" icon="check-circle" type="is-success")
                 p {{ item }}
         div(class="tile is-parent is-half has-text-justified")
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
             ul(class="fa-ul")
               li(v-for="item in data['skill.text']['ko']['items']")
-                b-icon( class="fa-li" pack="fa" icon="times" type="is-danger")
+                b-icon( class="fa-li" pack="far" icon="times-circle" type="is-danger")
                 p {{ item }}
 </template>
 <script>
