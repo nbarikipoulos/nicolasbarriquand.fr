@@ -51,9 +51,9 @@
         section(class="modal-card-body")
           div(
             v-for="detail in data['details']"
-            class="box has-text-justified"
+            class=" box has-text-justified"
           )
-            h4(class="title is-5")
+            h4(class="title is-5 has-text-white")
               p {{ detail['title'] }}
             ul(v-if="detail['elements']" class="fa-ul")
               li(v-for="element in detail['elements']")
