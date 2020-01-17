@@ -2,10 +2,10 @@
   section(class='section' :id="data.nav['anchor']")
     div(class="section-heading")
       h1(class="title is-2") {{ data.title }}
-      p(class="subtitle is-5") {{ data.subtitle }}
+      //- p(class="subtitle is-5") {{ data.subtitle }}
 
     div(class='container subsection is-size-6')
-        div(class='columns is-centered box')
+        div(class='columns is-centered is-white')
           div(class='column is-8')
             div(class='columns is-vcentered')
               div(class='column is-6')
@@ -16,7 +16,6 @@
                   b-icon(pack="fa" :icon="item['icon']" type="is-primary")
                   span &nbsp;&nbsp;{{ item['type']}}&nbsp;&nbsp;
                   span(v-html="item['value']")
-    br
 </template>
 <script>
 
