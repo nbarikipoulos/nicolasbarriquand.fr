@@ -30,14 +30,14 @@
                       class="is-size-3 has-text-weight-bold has-text-primary"
                     ) {{ data['figures']['xp']['value'] }}
                     span(
-                      class="is-size-5 has-text-weight-bold"
+                      class="is-size-6 has-text-weight-bold"
                     )  {{ data['figures']['xp']['label'] }}
                   div(class="tile is-child box has-text-centered")
                     span(
                       class="is-size-3 has-text-weight-bold has-text-primary"
                     ) {{ data['figures']['project']['value'] }}
                     span(
-                      class="is-size-5 has-text-weight-bold"
+                      class="is-size-6 has-text-weight-bold"
                     )  {{ data['figures']['project']['label'] }}
                 div(class="tile is-parent is-7")
                   div(class="tile is-child box")
@@ -45,7 +45,7 @@
                       class="is-size-3 has-text-weight-bold has-text-primary"
                     ) {{ data['figures']['client']['value'] }}
                     span(
-                      class="is-size-4 has-text-weight-bold"
+                      class="is-size-6 has-text-weight-bold"
                     )  {{ data['figures']['client']['label'] }}
                       div(class="image is-16by9")
                         img(src="@/assets/pig.gif")
