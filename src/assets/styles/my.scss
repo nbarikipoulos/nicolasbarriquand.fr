@@ -2,14 +2,14 @@
 
 // My variables
 
-$primary-color: rgb(57, 139, 25); // rgb(36, 139, 82); // hsl(217, 71%, 53%); //rgb(36, 9, 9);
+$primary-color: rgb(57, 152, 207); // rgb(36, 139, 82); // hsl(217, 71%, 53%); //rgb(36, 9, 9);
 
 $bg: white; // hsl(0, 100%, 2%);
 $text-color: black;
 
 $shadow-color: rgba($primary-color, 1);
 // $shadow: 0 0.5em 1em -0.125em $shadow-color, 0 0px 0 1px $shadow-color;
-$shadow: 0 0 0 0 $shadow-color, 0 0px 0 1px $shadow-color;
+$shadow: 0 0 0 0 $shadow-color, 0 0 0 1px $shadow-color;
 
 $bg-container: black;
 $text-color-container: white;
@@ -46,7 +46,7 @@ $card-footer-border-top: 1px solid $primary;
 $card-shadow: $shadow;
 $card-footer-background-color: $bg-card-footer;
 
-$modal-background-background-color: rgba(white, 0.85);
+$modal-background-background-color: rgba(white, 0.65);
 
 $modal-card-head-background-color: black;
 $modal-card-title-color: $primary; //$text-color-card-head;

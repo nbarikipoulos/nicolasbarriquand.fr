@@ -5,8 +5,7 @@
       //- p(class="subtitle is-5") {{ data.subtitle }}
 
     div(class="container subsection")
-      div(class="box")
-        p(class="has-text-centered is-size-5 has-text-primary") {{ data.intro }}
+      p(class="has-text-centered is-size-6 has-text-black") {{ data.intro }}
 
     div(class="container subsection")
       div(class="tile is-ancestor")
@@ -44,7 +43,7 @@
             p(class="has-text-centered subtitle is-5") {{ data.text['figure.title'] }}
               div(class="tile is-ancestor")
                 div(class="tile is-parent is-vertical is-5")
-                  div(class="tile is-child box no-border")
+                  div(class="tile is-child box")
                     span(
                       class="is-size-4 has-text-weight-bold has-text-primary"
                     ) {{ data['figures']['xp']['value'] }}
