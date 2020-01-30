@@ -11,7 +11,7 @@
       div(class="card-header")
         p(class="card-header-title") {{ data['position'] }}
         p(v-if="hasDetail" class="card-header-icon")
-          b-icon(pack="fa" icon="ellipsis-h has-text-primary")
+          b-icon(pack="fa" icon="ellipsis-h has-text-white")
       div(class="card-content card-content-project")
         ul(class="fa-ul")
           li
@@ -30,7 +30,10 @@
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
         b-taglist
-          b-tag(v-for="tag in data['tech']" type="is-primary") {{ tag }}
+          b-tag(
+            v-for="tag in data['tech']"
+            type="is-primary"
+          ) {{ tag }}
     //- -----
     //- Modal (aka project details)
     //- -----
@@ -40,9 +43,8 @@
         header(class="modal-card-head")
           div(class="modal-card-title is-1") {{ data['position'] }}
           b-button(
-              class="is-pulled-right"
+              class="is-pulled-right is-black has-text-white"
               size="is-medium"
-              type="is-black"
               rounded
               icon-pack="fa"
               icon-left="times"
