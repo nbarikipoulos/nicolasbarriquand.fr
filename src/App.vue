@@ -3,20 +3,20 @@
     b-navbar(type="is-black" fixed-top)
       template(slot="end")
         b-navbar-item(
-          v-for="item in getNavItems()"
+          v-for="(item, index) in getNavItems()"
           class="has-text-primary"
           :href="'#' + item['anchor']"
+          :key="index"
         ) {{ item['item.name'] }}
-    Home(:data="getSectionData('home')")
-    About(:data="getSectionData('about')")
-    Services(:data="getSectionData('services')")
-    Projects(:data="getSectionData('projects')")
-    Contact(:data="getSectionData('contact')")
-    Footer(:data="data['footer']")
+    template(v-for="(elt, index) in getComps()")
+      component(
+        :is="elt.comp"
+        :data="elt.data"
+        :key="index"
+    )
 </template>
 
 <script>
-
 import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
 import Services from '@/components/Services.vue'
@@ -26,19 +26,23 @@ import Footer from '@/components/Footer.vue'
 
 import json from '@/data/data.json'
 
+const components = {
+  Home, About, Services, Projects, Contact, Footer
+}
+
 export default {
   name: 'app',
-  components: {
-    Home,
-    About,
-    Services,
-    Projects,
-    Contact,
-    Footer
-  },
+  components,
   data () { return { data: json } },
   methods: {
-    getSectionData (name) { return json.sections[name] },
+    getComps () {
+      return Object.keys(components).map(comp => ({
+        comp,
+        data: json.sections[
+          comp.toString().toLowerCase() // arf...
+        ]
+      }))
+    },
     getNavItems () {
       const sections = this.data.sections
       return Object.keys(sections)
