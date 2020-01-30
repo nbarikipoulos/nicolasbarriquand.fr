@@ -1,6 +1,6 @@
 <template lang="pug">
   div(id="app" class="is-unselectable")
-    b-navbar(type="is-white" fixed-top)
+    b-navbar(type="is-black" fixed-top)
       template(slot="end")
         b-navbar-item(
           v-for="item in getNavItems()"
