@@ -13,7 +13,6 @@
           Project(:data="project")
 </template>
 <script>
-
 import Project from '@/components/Project.vue'
 
 import json from '@/data/projects.json'

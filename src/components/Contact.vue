@@ -18,7 +18,6 @@
                 span(v-html="item['value']")
 </template>
 <script>
-
 export default {
   name: 'Contact',
   props: { data: {} }

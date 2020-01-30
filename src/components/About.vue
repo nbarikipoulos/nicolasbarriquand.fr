@@ -73,6 +73,7 @@
                 b-icon( class="fa-li" pack="far" icon="times-circle" type="is-danger")
                 p {{ item }}
 </template>
+
 <script>
 export default {
   name: 'About',

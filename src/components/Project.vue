@@ -71,7 +71,6 @@
           b-taglist
             b-tag(v-for="tag in data['tech']" type="is-primary") {{ tag }}
 </template>
-
 <script>
 export default {
   name: 'Project',
