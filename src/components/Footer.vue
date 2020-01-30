@@ -1,6 +1,6 @@
 <template lang="pug">
   footer(class="footer")
-    div(class="columns content is-vcentered  has-text-centered")
+    div(class="columns content is-vcentered  has-text-centered is-marginless")
         div(class="column is-narrow")
           span {{ data['copy'] }}
         div(class="column")
