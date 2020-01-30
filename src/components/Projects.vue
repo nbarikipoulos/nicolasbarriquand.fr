@@ -6,7 +6,10 @@
 
     div(class="container subsection")
       div(class="columns is-multiline")
-        div(v-for="project in projects" class="column is-half-tablet is-one-quarter-desktop")
+        div(
+          v-for="project in projects"
+          class="column is-half-tablet is-half-desktop is-one-quarter-fullhd"
+        )
           Project(:data="project")
 </template>
 <script>
