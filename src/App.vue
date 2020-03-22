@@ -54,11 +54,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/assets/styles/variables.scss";
-
-  // @import "~bulma/sass/utilities/_all";
-  @import "~bulma";
-  @import "~buefy/src/scss/buefy";
-
-  @import "@/assets/styles/custo.scss";
+  @import "@/assets/styles/main";
 </style>
