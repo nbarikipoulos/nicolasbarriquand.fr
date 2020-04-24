@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', monospace;
 }
 
 .section {
@@ -33,7 +33,7 @@
 .card-content-project {
   height: 250px;
   overflow-y: hidden;
-  border-top: 1px solid rgb(57, 152, 207);
+  border-top: 1px solid $primary;
 }
 
 .project-footer {
@@ -49,5 +49,5 @@
 }
 
 .is-shady:hover {
-  box-shadow: 3px 3px 3px rgb(57, 152, 207), 0 3px 3px rgb(57, 152, 207);
+  box-shadow: 3px 3px 3px $primary, 0 3px 3px $primary;
 }
