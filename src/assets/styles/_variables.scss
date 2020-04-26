@@ -1,19 +1,19 @@
 // My variables
 
-$primary-color: rgb(110, 161, 173);
+$primary-color: rgb(43, 43, 43);
 
-$bg: white; // hsl(0, 100%, 2%);
+$bg: rgba($primary-color, 0.05);
 $text-color: black;
 
 $shadow-color: rgba($primary-color, 1);
 // $shadow: 0 0.5em 1em -0.125em $shadow-color, 0 0px 0 1px $shadow-color;
 $shadow: 0 0 0 0 $shadow-color, 0 0 0 1px $shadow-color;
 
-$bg-container: invert($bg);
-$text-color-container: invert($text-color);
+$bg-container: $bg; //invert($bg);
+$text-color-container: $text-color; //invert($text-color);
 
-$bg-card-head: black;
-$text-color-card-head: $primary-color;
+$bg-card-head: $primary-color;
+$text-color-card-head: $text-color; //$primary-color;
 
 $bg-card-footer: $bg-card-head;
 
@@ -23,15 +23,18 @@ $primary: $primary-color;
 $body-background-color: $bg;
 $text: $text-color;
 
-$title-color: $primary;
+$title-color: darken($primary, 5%);
 $subtitle-color: rgba($title-color, .8);
 
 $link: $primary;
 
-$progress-value-background-color: $primary;
-$progress-border-radius: 0px; // aka radiusless
+$body-size: 1rem;
 
-// $box-radius: 0;
+$radius-large: 0px; // aka radiusless
+
+$progress-value-background-color: $primary;
+$progress-border-radius: $radius-large;
+
 $box-shadow: $shadow;
 $box-background-color: $bg-container;
 $box-color: $text-color-container;
@@ -44,17 +47,17 @@ $card-footer-border-top: 1px solid $primary;
 $card-shadow: $shadow;
 $card-footer-background-color: $bg-card-footer;
 
-$modal-background-background-color: rgba(white, 0.85);
+$modal-background-background-color: lighten($primary-color, 80%);
 
-$modal-card-head-background-color: black;
-$modal-card-title-color: $primary; //$text-color-card-head;
+$modal-card-head-background-color: $primary;
+$modal-card-title-color: white;
 $modal-card-head-border-bottom: 1px solid $primary; 
-$modal-card-body-background-color: black;
+$modal-card-body-background-color: $bg;
 $modal-card-foot-border-top: 1px solid $primary;
 $modal-close-right: -25px; // i.e. out of screen
 
-$footer-background-color: black;
-$footer-color: $primary;
+$footer-background-color: $primary;
+$footer-color: white;
 $footer-padding: 5px;
 
 $success: green;

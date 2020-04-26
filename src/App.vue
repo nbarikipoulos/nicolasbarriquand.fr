@@ -1,11 +1,10 @@
 <template lang="pug">
   div(id="app" class="is-unselectable")
-    b-navbar(type="is-black" fixed-top)
+    b-navbar(type="is-primary" fixed-top)
       template(slot="end")
         b-navbar-item(
           v-for="(item, index) in getNavItems()"
-          class="has-text-primary"
-          :href="'#' + item['anchor']"
+          :href="`#${item['anchor']}`"
           :key="index"
         ) {{ item['item.name'] }}
     template(v-for="(elt, index) in getComps()")
