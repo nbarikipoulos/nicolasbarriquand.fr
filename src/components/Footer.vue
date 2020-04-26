@@ -12,7 +12,7 @@
             b-icon(
               pack="fab"
               :icon="item['icon']"
-              type="is-primary"
+              type="is-white"
             )
         div(class="column is-narrow")
           a(

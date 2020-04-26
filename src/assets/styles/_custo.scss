@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-@import './variables';
+// @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
+  font-family: monospace;
 }
 
 .section {
@@ -32,7 +30,6 @@
   backface-visibility: initial;
   border-radius: 10px;
 }
-
 .card-content-project {
   height: 250px;
   overflow-y: hidden;

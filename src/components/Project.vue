@@ -31,9 +31,7 @@
       footer(class="card-footer project-footer")
         b-taglist
           b-tag(
-            v-for="tag in data['tech']"
-            type="is-primary"
-          ) {{ tag }}
+            v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
     //- -----
     //- Modal (aka project details)
     //- -----
@@ -41,9 +39,9 @@
       div(class="modal-card" @click="closeModal")
 
         header(class="modal-card-head")
-          div(class="modal-card-title is-1") {{ data['position'] }}
+          div(class="modal-card-title has-text-bold") {{ data['position'] }}
           b-button(
-              class="is-pulled-right is-black has-text-white"
+              class="is-pulled-right is-primary has-text-white"
               size="is-medium"
               rounded
               icon-pack="fa"
@@ -55,7 +53,7 @@
             v-for="detail in data['details']"
             class=" box has-text-justified"
           )
-            h4(class="title is-5 has-text-white")
+            h4(class="title is-5 has-text-primary")
               p {{ detail['title'] }}
             ul(v-if="detail['elements']" class="fa-ul")
               li(v-for="element in detail['elements']")
@@ -69,7 +67,7 @@
 
         footer(class="modal-card-foot")
           b-taglist
-            b-tag(v-for="tag in data['tech']" type="is-primary") {{ tag }}
+            b-tag(v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
 </template>
 <script>
 export default {
