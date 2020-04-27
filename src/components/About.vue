@@ -4,14 +4,6 @@
       h1(class="title is-2") {{ data.title }}
       //- p(class="subtitle is-5") {{ data.subtitle }}
 
-    div(class="container subsection box")
-      ul(class="fa-ul")
-        li(
-          v-for="line in data['intro']"
-        )
-          b-icon(class="fa-li" pack="fa" icon="chevron-circle-right" type="is-primary")
-          span(class="is-size-5") {{ line }}
-
     div(class="container subsection")
       div(class="tile is-ancestor")
         div(class="tile is-parent is-half")
