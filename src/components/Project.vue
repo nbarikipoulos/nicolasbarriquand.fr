@@ -73,7 +73,7 @@
 export default {
   name: 'Project',
   props: { data: {} },
-  data () { return { isModalActive: false } },
+  data: _ => ({ isModalActive: false }),
   computed: {
     hasDetail: function () { return this.data.details }
   },

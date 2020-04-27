@@ -32,7 +32,7 @@ const components = {
 export default {
   name: 'app',
   components,
-  data () { return { data: json } },
+  data: _ => ({ data: json }),
   methods: {
     getComps () {
       return Object.keys(components).map(comp => ({

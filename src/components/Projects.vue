@@ -22,7 +22,7 @@ export default {
   components: {
     Project
   },
-  data () { return { projects: json } },
+  data: _ => ({ projects: json }),
   props: { data: {} }
 }
 </script>
