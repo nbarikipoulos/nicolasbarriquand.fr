@@ -26,7 +26,7 @@ import Footer from '@/components/Footer.vue'
 import json from '@/data/data.json'
 
 const components = {
-  Home, About, Services, Projects, Contact, Footer
+  Home, Services, About, Projects, Contact, Footer
 }
 
 export default {
