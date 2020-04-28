@@ -25,7 +25,7 @@
             span {{ data['date'] }}
         br
         ul(class="fa-ul")
-          li(class="has-text-justified")
+          li
             b-icon(class="fa-li" pack="fa" icon="hammer" type="is-primary")
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
@@ -39,7 +39,7 @@
       div(class="modal-card" @click="closeModal")
 
         header(class="modal-card-head")
-          div(class="modal-card-title has-text-bold") {{ data['position'] }}
+          div(class="modal-card-title is-size-5-mobile has-text-bold") {{ data['position'] }}
           b-button(
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
@@ -51,7 +51,7 @@
         section(class="modal-card-body")
           div(
             v-for="detail in data['details']"
-            class=" box has-text-justified"
+            class="box"
           )
             h4(class="title is-5 has-text-primary")
               p {{ detail['title'] }}

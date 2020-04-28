@@ -50,14 +50,14 @@
     div(class="container subsection")
       div(class="tile is-ancestor")
         //- FIXME to factorize
-        div(class="tile is-parent is-half has-text-justified")
+        div(class="tile is-parent is-half")
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
             ul(class="fa-ul")
               li(v-for="item in data['skill.text']['ok']['items']")
                 b-icon( class="fa-li" pack="fa" icon="check-circle" type="is-success")
                 p {{ item }}
-        div(class="tile is-parent is-half has-text-justified")
+        div(class="tile is-parent is-half")
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
             ul(class="fa-ul")
