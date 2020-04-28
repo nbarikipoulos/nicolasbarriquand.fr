@@ -25,7 +25,7 @@
             span {{ data['date'] }}
         br
         ul(class="fa-ul")
-          li(class="has-text-justified")
+          li
             b-icon(class="fa-li" pack="fa" icon="hammer" type="is-primary")
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
@@ -51,7 +51,7 @@
         section(class="modal-card-body")
           div(
             v-for="detail in data['details']"
-            class=" box has-text-justified"
+            class="box"
           )
             h4(class="title is-5 has-text-primary")
               p {{ detail['title'] }}
