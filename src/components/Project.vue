@@ -39,7 +39,7 @@
       div(class="modal-card" @click="closeModal")
 
         header(class="modal-card-head")
-          div(class="modal-card-title has-text-bold") {{ data['position'] }}
+          div(class="modal-card-title is-size-5-mobile has-text-bold") {{ data['position'] }}
           b-button(
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
