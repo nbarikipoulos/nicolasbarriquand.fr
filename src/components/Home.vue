@@ -2,11 +2,11 @@
   section(:id="data.nav['anchor']")
     div(class="hero is-small is-primary")
       div(class="hero-body")
-        div(class="container")
+        div(class="container has-text-left")
           p(class="has-text-primary-white") {{ getText('hero.pre.title') }}
           h1(class="title is-2 has-text-primary-white") {{ getText('hero.title') }}
           h2(class="subtitle is-3 has-text-primary-white") {{ getText('hero.subtitle') }}
-    div(class="container" :style="{ 'margin-top': '32px'}")
+    div(class="section")
       div(class="container box")
         ul(class="fa-ul")
           li(
