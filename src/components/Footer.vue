@@ -13,6 +13,7 @@
               pack="fab"
               :icon="item['icon']"
               type="is-white"
+              :style="{'margin':'0.1em'}"
             )
         div(class="column is-narrow")
           a(
