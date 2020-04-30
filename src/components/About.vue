@@ -1,8 +1,8 @@
 <template lang="pug">
   section(class="section" :id="data.nav['anchor']")
     div(class="section-heading")
-      h1(class="title is-2") {{ data.title }}
-      //- p(class="subtitle is-5") {{ data.subtitle }}
+      h1(class="title") {{ data.title }}
+      //- p(class="subtitle") {{ data.subtitle }}
 
     div(class="container subsection")
       div(class="tile is-ancestor")

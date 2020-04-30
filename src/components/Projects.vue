@@ -1,14 +1,14 @@
 <template lang="pug">
   section(class="section" :id="data.nav['anchor']")
     div(class="section-heading")
-      h1(class="title is-2") {{ data.title }}
-      p(class="subtitle is-5") {{ data.subtitle }}
+      h1(class="title") {{ data.title }}
+      p(class="subtitle") {{ data.subtitle }}
 
     div(class="container subsection")
       div(class="columns is-multiline")
         div(
           v-for="project in projects"
-          class="column is-half-tablet is-half-desktop is-one-third-fullhd"
+          class="column is-half-tablet is-half-desktop is-half-fullhd"
         )
           Project(:data="project")
 </template>

@@ -18,7 +18,7 @@
             b-icon(class="fa-li" pack="fa" icon="building" type="is-primary")
             span {{ data['company'] }}
           li
-            b-icon(class="fa-li" pack="fa" icon="city" type="is-primary")
+            b-icon(class="fa-li" pack="fas" icon="globe-europe" type="is-primary")
             span {{ data['location'] }}
           li
             b-icon(class="fa-li" pack="fa" icon="calendar-alt" type="is-primary")
@@ -26,7 +26,7 @@
         br
         ul(class="fa-ul")
           li
-            b-icon(class="fa-li" pack="fa" icon="hammer" type="is-primary")
+            b-icon(class="fa-li" pack="fa" icon="briefcase" type="is-primary")
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
         b-taglist
@@ -39,7 +39,7 @@
       div(class="modal-card" @click="closeModal")
 
         header(class="modal-card-head")
-          div(class="modal-card-title is-size-5-mobile has-text-bold") {{ data['position'] }}
+          div(class="modal-card-title is-size-6-mobile has-text-bold") {{ data['position'] }}
           b-button(
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
@@ -53,7 +53,7 @@
             v-for="detail in data['details']"
             class="box"
           )
-            h4(class="title is-5 has-text-primary")
+            h4(class="has-text-weight-bold has-text-primary")
               p {{ detail['title'] }}
             ul(v-if="detail['elements']" class="fa-ul")
               li(v-for="element in detail['elements']")

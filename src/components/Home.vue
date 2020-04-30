@@ -13,7 +13,7 @@
             v-for="line in getText('intro')"
           )
             b-icon(class="fa-li" pack="fa" icon="chevron-circle-right" type="is-primary")
-            span(class="is-size-5") {{ line }}
+            span {{ line }}
 </template>
 <script>
 export default {

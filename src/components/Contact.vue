@@ -1,10 +1,10 @@
 <template lang="pug">
   section(class="section" :id="data.nav['anchor']")
     div(class="section-heading")
-      h1(class="title is-2") {{ data.title }}
-      //- p(class="subtitle is-5") {{ data.subtitle }}
+      h1(class="title") {{ data.title }}
+      //- p(class="subtitle") {{ data.subtitle }}
 
-    div(class="container subsection is-size-6")
+    div(class="container subsection")
       div(class="columns is-centered is-white")
         div(class="column is-8")
           div(class="columns is-vcentered")

@@ -5,6 +5,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+li {
+  padding-top: 0;
+  margin-bottom: 0.20em;
+}
+
+.fa-li {
+  padding-top: 0.1em;
+}
+
 .section {
   padding-top: 3.5em;
   padding-bottom: 0em;
@@ -30,7 +39,7 @@
   border-radius: 10px;
 }
 .card-content-project {
-  height: 250px;
+  height: 285px;
   overflow-y: hidden;
   border-top: 1px solid $primary;
 }
