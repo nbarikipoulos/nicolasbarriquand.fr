@@ -9,7 +9,7 @@
         div(v-for="item in data['parts']" class="column is-6")
           div(class="box")
             h1(class="has-text-weight-bold")
-              b-icon(pack="fa" :icon="item['icon']" type="is-primary")
+              b-icon(pack="fa" :icon="item['icon']" type="is-icon")
               span &nbsp;{{ item.title }}
 </template>
 <script>

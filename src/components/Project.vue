@@ -15,18 +15,18 @@
       div(class="card-content card-content-project")
         ul(class="fa-ul")
           li
-            b-icon(class="fa-li" pack="fa" icon="building" type="is-primary")
+            b-icon(class="fa-li" pack="fa" icon="building" type="is-icon")
             span {{ data['company'] }}
           li
-            b-icon(class="fa-li" pack="fas" icon="globe-europe" type="is-primary")
+            b-icon(class="fa-li" pack="fas" icon="globe-europe" type="is-icon")
             span {{ data['location'] }}
           li
-            b-icon(class="fa-li" pack="fa" icon="calendar-alt" type="is-primary")
+            b-icon(class="fa-li" pack="fa" icon="calendar-alt" type="is-icon")
             span {{ data['date'] }}
         br
         ul(class="fa-ul")
           li
-            b-icon(class="fa-li" pack="fa" icon="briefcase" type="is-primary")
+            b-icon(class="fa-li" pack="fa" icon="briefcase" type="is-icon")
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
         b-taglist
@@ -61,7 +61,7 @@
                   class="fa-li"
                   pack="fa"
                   icon="angle-right"
-                  type="is-primary"
+                  type="is-icon"
                 )
                 span {{ element }}
 

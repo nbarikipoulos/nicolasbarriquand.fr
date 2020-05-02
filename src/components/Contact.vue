@@ -13,7 +13,7 @@
                 img(src="@/assets/location.jpg")
             div(class="column is-6")
               p(v-for="item in data['items']")
-                b-icon(pack="fa" :icon="item['icon']" type="is-primary")
+                b-icon(pack="fa" :icon="item['icon']" type="is-icon")
                 span &nbsp;&nbsp;{{ item['type']}}&nbsp;&nbsp;
                 span(v-html="item['value']")
 </template>

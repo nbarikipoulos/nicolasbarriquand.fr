@@ -12,7 +12,7 @@
           li(
             v-for="line in getText('intro')"
           )
-            b-icon(class="fa-li" pack="fa" icon="chevron-circle-right" type="is-primary")
+            b-icon(class="fa-li" pack="fa" icon="chevron-circle-right" type="is-icon")
             span {{ line }}
 </template>
 <script>

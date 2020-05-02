@@ -2,7 +2,7 @@
 
 $primary-color: rgb(119, 3, 3);
 
-$bg: white; // rgba($primary-color, 0.7);
+$bg: white;
 $text-color: black;
 
 $shadow-color: rgba($primary-color, 1);
@@ -16,6 +16,8 @@ $bg-card-head: $primary-color;
 $text-color-card-head: $text-color; //$primary-color;
 
 $bg-card-footer: $bg-card-head;
+
+$main-icon-color: $primary-color;
 
 // Overriding Bulma variables.
 
@@ -62,3 +64,17 @@ $footer-padding: 5px;
 
 $success: green;
 $danger: red;
+
+//
+// Update Color Maps
+//
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/derived-variables";
+
+$extraColors: (
+  "icon": ($main-icon-color, findColorInvert($main-icon-color)),
+);
+
+$colors: map-merge($colors, $extraColors);
