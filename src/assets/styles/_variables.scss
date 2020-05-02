@@ -49,7 +49,7 @@ $card-footer-border-top: 1px solid $primary;
 $card-shadow: $shadow;
 $card-footer-background-color: $bg-card-footer;
 
-$modal-background-background-color: lighten($primary-color, 80%);
+$modal-background-background-color: rgba($bg, 0.9);
 
 $modal-card-head-background-color: $primary;
 $modal-card-title-color: white;
