@@ -1,8 +1,8 @@
 // My variables
 
-$primary-color: rgb(87, 17, 17);
+$primary-color: rgb(119, 3, 3);
 
-$bg: rgba($primary-color, 0.05);
+$bg: white; // rgba($primary-color, 0.7);
 $text-color: black;
 
 $shadow-color: rgba($primary-color, 1);
@@ -30,7 +30,7 @@ $link: $primary;
 
 $body-size: 1rem;
 
-$radius-large: 0px; // aka radiusless
+$radius-large: 0px;
 
 $progress-value-background-color: $primary;
 $progress-border-radius: $radius-large;
