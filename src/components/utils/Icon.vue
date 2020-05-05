@@ -7,11 +7,10 @@
 </template lang="pug">
 
 <script>
-import section from '@/mixins/section'
+import iconStore from '@/lib/utils/iconStore'
 
 export default {
   name: 'ExtBIcon',
-  mixins: [section],
   data: _ => ({ pack: undefined, name: undefined }),
   props: {
     ico: [Object, String],
@@ -19,7 +18,7 @@ export default {
   },
   mounted: function () {
     const object = typeof this.ico === 'string'
-      ? this.getIcon(this.ico)
+      ? iconStore.get(this.ico)
       : this.ico
 
     this.pack = object.pack

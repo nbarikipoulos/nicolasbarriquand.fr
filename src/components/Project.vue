@@ -37,8 +37,8 @@
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
               rounded
-              :icon-pack="getIcon('times')['pack']"
-              :icon-left="getIcon('times')['name']"
+              :icon-pack="closeIcon['pack']"
+              :icon-left="closeIcon['name']"
               @click="closeModal"
           )
         section(class="modal-card-body")
@@ -61,10 +61,12 @@
 <script>
 import section from '@/mixins/section'
 
+import iconStore from '@/lib/utils/iconStore'
+
 export default {
   name: 'Project',
   mixins: [section],
-  data: _ => ({ isModalActive: false }),
+  data: _ => ({ isModalActive: false, closeIcon: iconStore.get('times') }),
   props: { data: {} },
   computed: {
     hasDetail: function () { return 'details' in this.data }
