@@ -10,6 +10,7 @@
     template(v-for="(elt, index) in getComps()")
       component(
         :is="elt.comp"
+        :content="elt.data"
         :data="elt.data"
         :key="index"
     )

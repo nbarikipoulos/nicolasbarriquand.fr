@@ -9,22 +9,22 @@
       @click="openModal"
     )
       div(class="card-header")
-        p(class="card-header-title") {{ data['position'] }}
+        p(class="card-header-title") {{ getContent('position') }}
         p(v-if="hasDetail" class="card-header-icon")
           ext-b-icon(ico="ellipsis" type="is-white")
       div(class="card-content card-content-project")
         ul(class="fa-ul")
           li(v-for="id in ['company', 'location', 'date']")
             ext-b-icon(class="fa-li" :ico="id")
-            span {{ data[id] }}
+            span {{ getContent(id) }}
         br
         ul(class="fa-ul")
           li
             ext-b-icon(class="fa-li" ico="briefcase")
-            span(style="overflow: hidden;") {{ data['desc'] }}
+            span(style="overflow: hidden;") {{ getContent('desc') }}
       footer(class="card-footer project-footer")
         b-taglist
-          b-tag(v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
+          b-tag(v-for="tag in getContent('tech')" :key="tag" type="is-white") {{ tag }}
     //- -----
     //- Modal (aka project details)
     //- -----
@@ -32,7 +32,7 @@
       div(class="modal-card" @click="closeModal")
 
         header(class="modal-card-head")
-          div(class="modal-card-title is-size-6-mobile has-text-bold") {{ data['position'] }}
+          div(class="modal-card-title is-size-6-mobile has-text-bold") {{ getContent('position') }}
           b-button(
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
@@ -43,7 +43,7 @@
           )
         section(class="modal-card-body")
           div(
-            v-for="detail in data['details']"
+            v-for="detail in getContent('details')"
             class="box"
           )
             h4(class="has-text-weight-bold has-text-primary")
@@ -55,7 +55,7 @@
 
         footer(class="modal-card-foot")
           b-taglist
-            b-tag(v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
+            b-tag(v-for="tag in getContent('tech')" :key="tag" type="is-white") {{ tag }}
 </template>
 
 <script>
@@ -67,9 +67,8 @@ export default {
   name: 'Project',
   mixins: [section],
   data: _ => ({ isModalActive: false, closeIcon: iconStore.get('times') }),
-  props: { data: {} },
   computed: {
-    hasDetail: function () { return 'details' in this.data }
+    hasDetail: function () { return 'details' in this.content }
   },
   methods: {
     openModal () { this.isModalActive = this.hasDetail },

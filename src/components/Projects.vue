@@ -1,8 +1,8 @@
 <template lang="pug">
-  section(class="section" :id="data.nav['anchor']")
+  section(class="section" :id="getContent('nav', 'anchor')")
     div(class="section-heading")
-      h1(class="title") {{ data.title }}
-      p(class="subtitle") {{ data.subtitle }}
+      h1(class="title") {{ getContent('title') }}
+      p(class="subtitle") {{ getContent('subtitle') }}
 
     div(class="container subsection")
       div(class="columns is-multiline")
@@ -10,19 +10,22 @@
           v-for="project in projects"
           class="column is-half-tablet is-half-desktop is-half-fullhd"
         )
-          Project(:data="project")
+          Project(:content="project")
 </template>
+
 <script>
 import Project from '@/components/Project.vue'
+
+import section from '@/mixins/section'
 
 import json from '@/data/projects.json'
 
 export default {
   name: 'Projects',
+  mixins: [section],
   components: {
     Project
   },
-  data: _ => ({ projects: json }),
-  props: { data: {} }
+  data: _ => ({ projects: json })
 }
 </script>

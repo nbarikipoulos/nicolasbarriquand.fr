@@ -3,7 +3,14 @@
 const mixin = {
   props: { content: Object },
   methods: {
-    getContent (id) { return this.content[id] }
+    getContent (...ids) {
+      let p
+      let res = this.content
+      while ((p = ids.shift()) !== undefined) {
+        res = res[p]
+      }
+      return res
+    }
   }
 }
 

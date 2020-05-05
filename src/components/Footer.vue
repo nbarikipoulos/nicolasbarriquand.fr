@@ -2,10 +2,10 @@
   footer(class="footer")
     div(class="columns content is-vcentered  has-text-centered is-marginless")
         div(class="column is-narrow")
-          span {{ data['copy'] }}
+          span {{ getContent('copy') }}
         div(class="column")
           a(
-            v-for="item in data['links']"
+            v-for="item in getContent('links')"
             :href="item['url']",
             target="_blank"
           )
@@ -31,7 +31,6 @@ import section from '@/mixins/section'
 
 export default {
   name: 'Footer',
-  mixins: [section],
-  props: { data: {} }
+  mixins: [section]
 }
 </script>
