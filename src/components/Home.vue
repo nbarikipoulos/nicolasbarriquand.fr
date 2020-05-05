@@ -12,12 +12,20 @@
           li(
             v-for="line in getText('intro')"
           )
-            b-icon(class="fa-li" pack="fa" icon="chevron-circle-right" type="is-icon")
+            b-icon(
+              class="fa-li"
+              :pack="ico('chevron-circle')['pack']"
+              :icon="ico('chevron-circle')['name']"
+              type="is-icon")
             span {{ line }}
 </template>
+
 <script>
+import section from '@/mixins/section'
+
 export default {
   name: 'Home',
+  mixins: [section],
   props: { data: {} },
   methods: {
     getText (id) { return this.data.text[id] }

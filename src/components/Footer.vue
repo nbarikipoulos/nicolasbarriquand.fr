@@ -10,8 +10,8 @@
             target="_blank"
           )
             b-icon(
-              pack="fab"
-              :icon="item['icon']"
+              :pack="ico(item['icon'])['pack']"
+              :icon="ico(item['icon'])['name']"
               type="is-white"
               :style="{'margin':'0.1em'}"
             )
@@ -26,9 +26,13 @@
               alt="Made with Bulma" width="128" height="24"
             )
 </template>
+
 <script>
+import section from '@/mixins/section'
+
 export default {
   name: 'Footer',
+  mixins: [section],
   props: { data: {} }
 }
 </script>

@@ -11,27 +11,34 @@
       div(class="card-header")
         p(class="card-header-title") {{ data['position'] }}
         p(v-if="hasDetail" class="card-header-icon")
-          b-icon(pack="fa" icon="ellipsis-h has-text-white")
+          b-icon(
+            class="has-text-white"
+            :pack="ico('ellipsis')['pack']"
+            :icon="ico('ellipsis')['name']"
+          )
       div(class="card-content card-content-project")
         ul(class="fa-ul")
-          li
-            b-icon(class="fa-li" pack="fa" icon="building" type="is-icon")
-            span {{ data['company'] }}
-          li
-            b-icon(class="fa-li" pack="fas" icon="globe-europe" type="is-icon")
-            span {{ data['location'] }}
-          li
-            b-icon(class="fa-li" pack="fa" icon="calendar-alt" type="is-icon")
-            span {{ data['date'] }}
+          li(v-for="itemId in ['company', 'location', 'date']")
+            b-icon(
+              class="fa-li"
+              :pack="ico(itemId)['pack']"
+              :icon="ico(itemId)['name']"
+              type="is-icon"
+            )
+            span {{ data[itemId] }}
         br
         ul(class="fa-ul")
           li
-            b-icon(class="fa-li" pack="fa" icon="briefcase" type="is-icon")
+            b-icon(
+              class="fa-li"
+              :pack="ico('briefcase')['pack']"
+              :icon="ico('briefcase')['name']"
+              type="is-icon"
+            )
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
         b-taglist
-          b-tag(
-            v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
+          b-tag(v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
     //- -----
     //- Modal (aka project details)
     //- -----
@@ -44,8 +51,8 @@
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
               rounded
-              icon-pack="fa"
-              icon-left="times"
+              :icon-pack="ico('times')['pack']"
+              :icon-left="ico('times')['name']"
               @click="closeModal"
           )
         section(class="modal-card-body")
@@ -59,8 +66,8 @@
               li(v-for="element in detail['elements']")
                 b-icon(
                   class="fa-li"
-                  pack="fa"
-                  icon="angle-right"
+                  :pack="ico('chevron')['pack']"
+                  :icon="ico('chevron')['name']"
                   type="is-icon"
                 )
                 span {{ element }}
@@ -69,23 +76,21 @@
           b-taglist
             b-tag(v-for="tag in data['tech']" :key="tag" type="is-white") {{ tag }}
 </template>
+
 <script>
+import section from '@/mixins/section'
+
 export default {
   name: 'Project',
-  props: { data: {} },
+  mixins: [section],
   data: _ => ({ isModalActive: false }),
+  props: { data: {} },
   computed: {
-    hasDetail: function () { return this.data.details }
+    hasDetail: function () { return 'details' in this.data }
   },
   methods: {
-    openModal () {
-      if (this.hasDetail) {
-        this.isModalActive = true
-      }
-    },
-    closeModal () {
-      this.isModalActive = false
-    }
+    openModal () { this.isModalActive = this.hasDetail },
+    closeModal () { this.isModalActive = false }
   }
 }
 </script>

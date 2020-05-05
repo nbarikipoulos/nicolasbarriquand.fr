@@ -9,12 +9,20 @@
         div(v-for="item in data['parts']" class="column is-6")
           div(class="box")
             h1(class="has-text-weight-bold")
-              b-icon(pack="fa" :icon="item['icon']" type="is-icon")
+              b-icon(
+                :pack="ico(item['icon'])['pack']"
+                :icon="ico(item['icon'])['name']"
+                type="is-icon"
+              )
               span &nbsp;{{ item.title }}
 </template>
+
 <script>
+import section from '@/mixins/section'
+
 export default {
   name: 'Services',
+  mixins: [section],
   props: { data: {} },
   methods: {
     getText (id) { return this.data.text[id] }

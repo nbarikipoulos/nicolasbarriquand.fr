@@ -2,7 +2,6 @@
   section(class="section" :id="data.nav['anchor']")
     div(class="section-heading")
       h1(class="title") {{ data.title }}
-      //- p(class="subtitle") {{ data.subtitle }}
 
     div(class="container subsection")
       div(class="tile is-ancestor")
@@ -55,20 +54,33 @@
             p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ok']['title'] }}
             ul(class="fa-ul")
               li(v-for="item in data['skill.text']['ok']['items']")
-                b-icon( class="fa-li" pack="fa" icon="check-circle" type="is-success")
+                b-icon(
+                  class="fa-li"
+                  :pack="ico('ok')['pack']"
+                  :icon="ico('ok')['name']"
+                  type="is-success"
+                )
                 p {{ item }}
         div(class="tile is-parent is-half")
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ data['skill.text']['ko']['title'] }}
             ul(class="fa-ul")
               li(v-for="item in data['skill.text']['ko']['items']")
-                b-icon( class="fa-li" pack="far" icon="times-circle" type="is-danger")
+                b-icon(
+                  class="fa-li"
+                  :pack="ico('ko')['pack']"
+                  :icon="ico('ko')['name']"
+                  type="is-danger"
+                )
                 p {{ item }}
 </template>
 
 <script>
+import section from '@/mixins/section'
+
 export default {
   name: 'About',
+  mixins: [section],
   props: { data: {} }
 }
 </script>

@@ -2,7 +2,6 @@
   section(class="section" :id="data.nav['anchor']")
     div(class="section-heading")
       h1(class="title") {{ data.title }}
-      //- p(class="subtitle") {{ data.subtitle }}
 
     div(class="container subsection")
       div(class="columns is-centered is-white")
@@ -13,13 +12,21 @@
                 img(src="@/assets/location.jpg")
             div(class="column is-6")
               p(v-for="item in data['items']")
-                b-icon(pack="fa" :icon="item['icon']" type="is-icon")
-                span &nbsp;&nbsp;{{ item['type']}}&nbsp;&nbsp;
+                b-icon(
+                  :pack="ico(item['icon'])['pack']"
+                  :icon="ico(item['icon'])['name']"
+                  type="is-icon"
+                )
+                span &nbsp;&nbsp;{{ item['type'] }}&nbsp;&nbsp;
                 span(v-html="item['value']")
 </template>
+
 <script>
+import section from '@/mixins/section'
+
 export default {
   name: 'Contact',
+  mixins: [section],
   props: { data: {} }
 }
 </script>
