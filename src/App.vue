@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(id="app" class="is-family-monospace is-size-5-desktop has-text-justified")
+  div(id="app" class="is-family-monospace is-size-5-desktop is-unselectable has-text-justified")
     b-navbar(type="is-primary" fixed-top)
       template(slot="end")
         b-navbar-item(
