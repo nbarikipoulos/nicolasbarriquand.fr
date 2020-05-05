@@ -72,7 +72,7 @@
                   :icon="ico('ko')['name']"
                   type="is-danger"
                 )
-                p {{ item }}
+                span {{ item }}
 </template>
 
 <script>
