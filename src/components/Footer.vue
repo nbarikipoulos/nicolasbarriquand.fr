@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import section from '@/mixins/section'
+import content from '@/mixins/content'
 
 export default {
   name: 'Footer',
-  mixins: [section]
+  mixins: [content]
 }
 </script>

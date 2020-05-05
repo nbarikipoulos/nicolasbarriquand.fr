@@ -59,13 +59,13 @@
 </template>
 
 <script>
-import section from '@/mixins/section'
+import content from '@/mixins/content'
 
 import iconStore from '@/lib/utils/iconStore'
 
 export default {
   name: 'Project',
-  mixins: [section],
+  mixins: [content],
   data: _ => ({ isModalActive: false, closeIcon: iconStore.get('times') }),
   computed: {
     hasDetail: function () { return 'details' in this.content }

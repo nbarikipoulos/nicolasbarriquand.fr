@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import section from '@/mixins/section'
+import content from '@/mixins/content'
 
 export default {
   name: 'Contact',
-  mixins: [section]
+  mixins: [content]
 }
 </script>

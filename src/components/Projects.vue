@@ -16,13 +16,13 @@
 <script>
 import Project from '@/components/Project.vue'
 
-import section from '@/mixins/section'
+import content from '@/mixins/content'
 
 import json from '@/data/projects.json'
 
 export default {
   name: 'Projects',
-  mixins: [section],
+  mixins: [content],
   components: {
     Project
   },
