@@ -7,7 +7,7 @@ const mixin = {
   data: _ => ({ icoStore_: {} }),
   methods: {
     getContent (id) { return this.content[id] },
-    ico (id) {
+    getIcon (id) {
       if (!(id in this.icoStore_)) {
         this.icoStore_[id] = _icons[id]
       }

@@ -9,11 +9,7 @@
         div(v-for="item in data['parts']" class="column is-6")
           div(class="box")
             h1(class="has-text-weight-bold")
-              b-icon(
-                :pack="ico(item['icon'])['pack']"
-                :icon="ico(item['icon'])['name']"
-                type="is-icon"
-              )
+              ext-b-icon(:ico="item['icon']")
               span &nbsp;{{ item.title }}
 </template>
 

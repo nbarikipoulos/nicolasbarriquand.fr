@@ -1,9 +1,11 @@
 import Vue from 'vue'
-import App from '@/App.vue'
-
 import Buefy from 'buefy'
 
+import App from '@/App.vue'
+import Icon from '@/components/utils/Icon'
+
 Vue.use(Buefy)
+Vue.component('ExtBIcon', Icon)
 
 Vue.config.productionTip = false
 

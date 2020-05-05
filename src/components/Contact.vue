@@ -12,11 +12,7 @@
                 img(src="@/assets/location.jpg")
             div(class="column is-6")
               p(v-for="item in data['items']")
-                b-icon(
-                  :pack="ico(item['icon'])['pack']"
-                  :icon="ico(item['icon'])['name']"
-                  type="is-icon"
-                )
+                ext-b-icon(:ico="item['icon']")
                 span &nbsp;&nbsp;{{ item['type'] }}&nbsp;&nbsp;
                 span(v-html="item['value']")
 </template>

@@ -9,9 +9,8 @@
             :href="item['url']",
             target="_blank"
           )
-            b-icon(
-              :pack="ico(item['icon'])['pack']"
-              :icon="ico(item['icon'])['name']"
+            ext-b-icon(
+              :ico="item['icon']"
               type="is-white"
               :style="{'margin':'0.1em'}"
             )

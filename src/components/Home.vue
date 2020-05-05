@@ -12,12 +12,9 @@
           li(
             v-for="line in getText('intro')"
           )
-            b-icon(
-              class="fa-li"
-              :pack="ico('chevron-circle')['pack']"
-              :icon="ico('chevron-circle')['name']"
-              type="is-icon")
-            span {{ line }}
+            span
+              ext-b-icon(class="fa-li" ico="chevron-circle")
+              span {{ line }}
 </template>
 
 <script>

@@ -11,30 +11,16 @@
       div(class="card-header")
         p(class="card-header-title") {{ data['position'] }}
         p(v-if="hasDetail" class="card-header-icon")
-          b-icon(
-            class="has-text-white"
-            :pack="ico('ellipsis')['pack']"
-            :icon="ico('ellipsis')['name']"
-          )
+          ext-b-icon(ico="ellipsis" type="is-white")
       div(class="card-content card-content-project")
         ul(class="fa-ul")
-          li(v-for="itemId in ['company', 'location', 'date']")
-            b-icon(
-              class="fa-li"
-              :pack="ico(itemId)['pack']"
-              :icon="ico(itemId)['name']"
-              type="is-icon"
-            )
-            span {{ data[itemId] }}
+          li(v-for="id in ['company', 'location', 'date']")
+            ext-b-icon(class="fa-li" :ico="id")
+            span {{ data[id] }}
         br
         ul(class="fa-ul")
           li
-            b-icon(
-              class="fa-li"
-              :pack="ico('briefcase')['pack']"
-              :icon="ico('briefcase')['name']"
-              type="is-icon"
-            )
+            ext-b-icon(class="fa-li" ico="briefcase")
             span(style="overflow: hidden;") {{ data['desc'] }}
       footer(class="card-footer project-footer")
         b-taglist
@@ -51,8 +37,8 @@
               class="is-pulled-right is-primary has-text-white"
               size="is-medium"
               rounded
-              :icon-pack="ico('times')['pack']"
-              :icon-left="ico('times')['name']"
+              :icon-pack="getIcon('times')['pack']"
+              :icon-left="getIcon('times')['name']"
               @click="closeModal"
           )
         section(class="modal-card-body")
@@ -64,12 +50,7 @@
               p {{ detail['title'] }}
             ul(v-if="detail['elements']" class="fa-ul")
               li(v-for="element in detail['elements']")
-                b-icon(
-                  class="fa-li"
-                  :pack="ico('chevron')['pack']"
-                  :icon="ico('chevron')['name']"
-                  type="is-icon"
-                )
+                ext-b-icon(class="fa-li" ico="chevron")
                 span {{ element }}
 
         footer(class="modal-card-foot")
