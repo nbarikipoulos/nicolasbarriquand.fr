@@ -11,16 +11,16 @@
       div(class="card-header")
         p(class="card-header-title") {{ getContent('position') }}
         p(v-if="hasDetail" class="card-header-icon")
-          ext-b-icon(ico="ellipsis" type="is-white")
+          ext-b-icon(icon="ellipsis" type="is-white")
       div(class="card-content card-content-project")
         ul(class="fa-ul")
           li(v-for="id in ['company', 'location', 'date']")
-            ext-b-icon(class="fa-li" :ico="id")
+            ext-b-icon(class="fa-li" :icon="id")
             span {{ getContent(id) }}
         br
         ul(class="fa-ul")
           li
-            ext-b-icon(class="fa-li" ico="briefcase")
+            ext-b-icon(class="fa-li" icon="briefcase")
             span(style="overflow: hidden;") {{ getContent('desc') }}
       footer(class="card-footer project-footer")
         b-taglist
@@ -38,7 +38,7 @@
               size="is-medium"
               rounded
               :icon-pack="closeIcon['pack']"
-              :icon-left="closeIcon['name']"
+              :icon-left="closeIcon['icon']"
               @click="closeModal"
           )
         section(class="modal-card-body")
@@ -50,7 +50,7 @@
               p {{ detail['title'] }}
             ul(v-if="detail['elements']" class="fa-ul")
               li(v-for="element in detail['elements']")
-                ext-b-icon(class="fa-li" ico="chevron")
+                ext-b-icon(class="fa-li" icon="chevron")
                 span {{ element }}
 
         footer(class="modal-card-foot")

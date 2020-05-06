@@ -49,8 +49,7 @@
               li(v-for="item in elt.content['items']")
                 ext-b-icon(
                   class="fa-li"
-                  :ico="elt.icon['name']"
-                  :type="elt.icon['type']"
+                  v-bind="elt.icon"
                 )
                 p {{ item }}
 </template>
@@ -67,8 +66,8 @@ export default {
     skillTextParts () {
       const paragraph = this.getContent('skill.text')
       return [
-        { content: paragraph.ok, icon: { name: 'ok', type: 'is-success' } },
-        { content: paragraph.ko, icon: { name: 'ko', type: 'is-danger' } }
+        { content: paragraph.ok, icon: { icon: 'ok', type: 'is-success' } },
+        { content: paragraph.ko, icon: { icon: 'ko', type: 'is-danger' } }
       ]
     }
   }

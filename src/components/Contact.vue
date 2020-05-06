@@ -12,7 +12,7 @@
                 img(src="@/assets/location.jpg")
             div(class="column is-6")
               p(v-for="item in getContent('items')")
-                ext-b-icon(:ico="item['icon']")
+                ext-b-icon(:icon="item['icon']")
                 span &nbsp;&nbsp;{{ item['type'] }}&nbsp;&nbsp;
                 span(v-html="item['value']")
 </template>

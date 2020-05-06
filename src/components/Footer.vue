@@ -10,7 +10,7 @@
             target="_blank"
           )
             ext-b-icon(
-              :ico="item['icon']"
+              :icon="item['icon']"
               type="is-white"
               :style="{'margin':'0.1em'}"
             )

@@ -1,7 +1,6 @@
 <template lang="pug">
   b-icon(
-    :pack="pack"
-    :icon="name"
+    v-bind="icoObject"
     :type="type"
   )
 </template lang="pug">
@@ -11,18 +10,15 @@ import iconStore from '@/lib/utils/iconStore'
 
 export default {
   name: 'ExtBIcon',
-  data: _ => ({ pack: undefined, name: undefined }),
+  data: _ => ({ icoObject: { pack: undefined, icon: undefined } }),
   props: {
-    ico: [Object, String],
+    icon: [Object, String],
     type: { type: String, default: 'is-icon' }
   },
   mounted: function () {
-    const object = typeof this.ico === 'string'
-      ? iconStore.get(this.ico)
+    this.icoObject = typeof this.icon === 'string'
+      ? iconStore.get(this.icon)
       : this.ico
-
-    this.pack = object.pack
-    this.name = object.name
   }
 }
 </script>

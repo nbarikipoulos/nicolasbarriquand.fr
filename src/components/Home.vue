@@ -13,7 +13,7 @@
             v-for="line in getContent('text', 'intro')"
           )
             span
-              ext-b-icon(class="fa-li" ico="chevron-circle")
+              ext-b-icon(class="fa-li" icon="chevron-circle")
               span {{ line }}
 </template>
 

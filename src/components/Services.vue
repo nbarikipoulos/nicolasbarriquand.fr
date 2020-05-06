@@ -9,7 +9,7 @@
         div(v-for="item in getContent('parts')" class="column is-6")
           div(class="box")
             h1(class="has-text-weight-bold")
-              ext-b-icon(:ico="item['icon']")
+              ext-b-icon(:icon="item['icon']")
               span &nbsp;{{ item.title }}
 </template>
 
