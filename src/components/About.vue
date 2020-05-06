@@ -21,55 +21,56 @@
             p(class="has-text-centered subtitle is-5") {{ getContent('text', 'figure.title') }}
               div(class="tile is-ancestor")
                 div(class="tile is-parent is-vertical is-5")
-                  div(class="tile is-child box has-text-centered")
-                    span(
-                      class="is-size-3 has-text-weight-bold has-text-primary"
-                    ) {{ getContent('figures', 'xp', 'value') }}
-                    span(
-                      class="is-size-6 has-text-weight-bold"
-                    )  {{ getContent('figures', 'xp','label') }}
-                  div(class="tile is-child box has-text-centered")
-                    span(
-                      class="is-size-3 has-text-weight-bold has-text-primary"
-                    ) {{ getContent('figures', 'project', 'value') }}
-                    span(
-                      class="is-size-6 has-text-weight-bold"
-                    )  {{ getContent('figures', 'project', 'label') }}
-                div(class="tile is-parent is-7")
+                  Figure(
+                    class="tile is-child box has-text-centered",
+                    v-bind="getContent('figures', 'xp')"
+                  )
+                  Figure(
+                    class="tile is-child box has-text-centered",
+                    v-bind="getContent('figures', 'project')"
+                  )
+                div(class="tile is-parent is-vertical is-7")
                   div(class="tile is-child box")
-                    span(
-                      class="is-size-3 has-text-weight-bold has-text-primary"
-                    ) {{ getContent('figures', 'client', 'value') }}
-                    span(
-                      class="is-size-6 has-text-weight-bold"
-                    )  {{ getContent('figures', 'client', 'label') }}
-                      div(class="image is-16by9")
-                        img(src="@/assets/pig.gif")
-
+                    Figure(
+                      class="tile is-child has-text-centered",
+                      v-bind="getContent('figures', 'client')"
+                    )
+                    div(class="tile is-child image is-16by9")
+                      img(src="@/assets/pig.gif")
     div(class="container subsection")
       div(class="tile is-ancestor")
-        //- FIXME to factorize
-        div(class="tile is-parent is-half")
+        div(
+          v-for="elt in skillTextParts()"
+          class="tile is-parent is-half"
+        )
           div(class="tile is-child box")
-            p(class="has-text-centered subtitle is-5") {{ getContent('skill.text', 'ok', 'title') }}
+            p(class="has-text-centered subtitle is-5") {{ elt.content['title'] }}
             ul(class="fa-ul")
-              li(v-for="item in getContent('skill.text', 'ok','items')")
-                ext-b-icon(class="fa-li" ico="ok" type="is-success")
+              li(v-for="item in elt.content['items']")
+                ext-b-icon(
+                  class="fa-li"
+                  :ico="elt.icon['name']"
+                  :type="elt.icon['type']"
+                )
                 p {{ item }}
-        div(class="tile is-parent is-half")
-          div(class="tile is-child box")
-            p(class="has-text-centered subtitle is-5") {{  getContent('skill.text', 'ko', 'title') }}
-            ul(class="fa-ul")
-              li(v-for="item in getContent('skill.text', 'ko','items')")
-                ext-b-icon(class="fa-li" ico="ko" type="is-danger")
-                span {{ item }}
 </template>
 
 <script>
+import Figure from '@/components/sub/Figure'
 import content from '@/mixins/content'
 
 export default {
   name: 'About',
-  mixins: [content]
+  mixins: [content],
+  components: { Figure },
+  methods: {
+    skillTextParts () {
+      const paragraph = this.getContent('skill.text')
+      return [
+        { content: paragraph.ok, icon: { name: 'ok', type: 'is-success' } },
+        { content: paragraph.ko, icon: { name: 'ko', type: 'is-danger' } }
+      ]
+    }
+  }
 }
 </script>
