@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Project from '@/components/Project.vue'
+import Project from '@/components/sub/Project.vue'
 
 import content from '@/mixins/content'
 
