@@ -6,7 +6,7 @@
           v-for="(item, index) in getNavItems()"
           :href="`#${item['anchor']}`"
           :key="index"
-        ) {{ item['item.name'] }}
+        ) {{ item['label'] }}
     template(v-for="(elt, index) in getComps()")
       component(
         :is="elt.comp"
