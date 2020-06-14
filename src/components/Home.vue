@@ -3,14 +3,14 @@
     div(class="hero is-small is-primary")
       div(class="hero-body")
         div(class="container has-text-left")
-          p(class="has-text-primary-white") {{ getContent('text', 'hero.pre.title') }}
-          h1(class="title is-2 has-text-primary-white") {{ getContent('text', 'hero.title') }}
-          h2(class="subtitle is-3 has-text-primary-white") {{ getContent('text', 'hero.subtitle') }}
+          p(class="has-text-primary-white") {{ getContent('hero', 'pre.title') }}
+          h1(class="title is-2 has-text-primary-white") {{ getContent('hero', 'title') }}
+          h2(class="subtitle is-3 has-text-primary-white") {{ getContent('hero', 'subtitle') }}
     div(class="section")
       div(class="container box")
         ul(class="fa-ul")
           li(
-            v-for="line in getContent('text', 'intro')"
+            v-for="line in getContent('intro')"
           )
             span
               ext-b-icon(class="fa-li" icon="chevron-circle")
