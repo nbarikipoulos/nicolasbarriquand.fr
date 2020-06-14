@@ -1,4 +1,9 @@
 {
+  "home": { "pack": "fas", "icon": "home" },
+  "bars": { "pack": "fas", "icon": "bars" },
+  "info": { "pack": "fas", "icon": "info" },
+  "list": { "pack": "fas", "icon": "th-list" },
+  "contact": { "pack": "far", "icon": "address-card" },
   "ok": { "pack": "fa", "icon": "check-circle" },
   "ko": { "pack": "far", "icon": "times-circle" },
   "ellipsis": { "pack": "fa", "icon": "ellipsis-h" },
