@@ -7,41 +7,45 @@
           :href="`#${item['anchor']}`"
           :key="index"
         ) {{ item['label'] }}
-    template(v-for="(elt, index) in getComps()")
+    template(v-for="(component, index) in getComponentData()")
       component(
-        :is="elt.comp"
-        :content="elt.data"
+        :is="component.name"
+        :content="component.data"
         :key="index"
     )
+    my-footer(:content="data.footer")
 </template>
 
 <script>
 'use strict'
 
 import * as Sections from '@/components/sections'
-import Footer from '@/components/Footer'
+import MyFooter from '@/components/Footer'
 
 import json from '@/data/data.json'
 
-const components = { ...Sections, Footer }
+const sectionstoDisplay = [
+  'home',
+  'about',
+  'services',
+  'projects',
+  'contact'
+]
 
 export default {
   name: 'app',
-  components,
-  data: _ => ({ data: json }),
+  components: { ...Sections, MyFooter },
+  data: _ => ({ data: json, sections: sectionstoDisplay }),
   methods: {
-    getComps () {
-      return Object.keys(components).map(comp => ({
-        comp,
-        data: json.sections[
-          comp.toString().toLowerCase() // arf...
-        ]
+    getComponentData () {
+      return this.sections.map(key => ({
+        name: key,
+        data: json.sections[key]
       }))
     },
     getNavItems () {
-      const sections = this.data.sections
-      return Object.keys(sections)
-        .map(key => sections[key].nav)
+      return this.sections
+        .map(key => this.data.sections[key].nav)
         .filter(elt => undefined !== elt)
     }
   }
