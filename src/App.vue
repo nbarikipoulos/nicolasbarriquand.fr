@@ -11,7 +11,6 @@
       component(
         :is="elt.comp"
         :content="elt.data"
-        :data="elt.data"
         :key="index"
     )
 </template>
