@@ -21,7 +21,7 @@
             span(style="overflow: hidden;") {{ getContent('desc') }}
       footer(class="card-footer project-footer")
         b-taglist
-          b-tag(v-for="tag in getContent('tech')" :key="tag" type="is-white") {{ tag }}
+          b-tag(v-for="tag in getContent('keys', 'tech')" :key="tag" type="is-white") {{ tag }}
     b-modal(
       :active.sync="isModalActive"
       has-modal-card

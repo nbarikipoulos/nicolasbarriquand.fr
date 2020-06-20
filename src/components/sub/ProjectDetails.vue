@@ -24,7 +24,7 @@
             span {{ element }}
     footer(class="modal-card-foot")
       b-taglist
-        b-tag(v-for="tag in getContent('tech')" :key="tag" type="is-white") {{ tag }}
+        b-tag(v-for="tag in getContent('keys', 'tech')" :key="tag" type="is-white") {{ tag }}
 </template>
 
 <script>
