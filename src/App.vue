@@ -13,16 +13,13 @@
         :content="component.data"
         :key="index"
     )
-    my-footer(:content="data.footer")
+    my-footer(:content="getContent('footer')")
 </template>
 
 <script>
-'use strict'
-
 import * as Sections from '@/components/sections'
 import MyFooter from '@/components/Footer'
-
-import json from '@/data/data.json'
+import { content } from '@/mixins'
 
 const sectionstoDisplay = [
   'home',
@@ -34,18 +31,19 @@ const sectionstoDisplay = [
 
 export default {
   name: 'app',
+  mixins: [content],
   components: { ...Sections, MyFooter },
-  data: _ => ({ data: json, sections: sectionstoDisplay }),
+  data: _ => ({ sections: sectionstoDisplay }),
   methods: {
     getComponentData () {
       return this.sections.map(key => ({
         name: key,
-        data: json.sections[key]
+        data: this.getContent('sections', key)
       }))
     },
     getNavItems () {
       return this.sections
-        .map(key => this.data.sections[key].nav)
+        .map(key => this.getContent('sections', key).nav)
         .filter(elt => undefined !== elt)
     }
   }
