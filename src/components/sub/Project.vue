@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import content from '@/mixins/content'
 import ProjectDetails from '@/components/sub/ProjectDetails.vue'
+import { content } from '@/mixins'
 
 export default {
   name: 'Project',

@@ -56,7 +56,7 @@
 
 <script>
 import Figure from '@/components/sub/Figure'
-import content from '@/mixins/content'
+import { content } from '@/mixins'
 
 export default {
   name: 'About',

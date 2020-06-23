@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import content from '@/mixins/content'
+import { content } from '@/mixins'
 import iconStore from '@/lib/utils/iconStore'
 
 const ico = iconStore.get('times')

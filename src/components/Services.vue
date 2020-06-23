@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import content from '@/mixins/content'
+import { content, projects } from '@/mixins'
 
 export default {
   name: 'Services',
-  mixins: [content]
+  mixins: [content, projects]
 }
 </script>

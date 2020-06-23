@@ -15,9 +15,7 @@
 
 <script>
 import Project from '@/components/sub/Project.vue'
-
-import content from '@/mixins/content'
-import projects from '@/mixins/projects'
+import { content, projects } from '@/mixins'
 
 export default {
   name: 'Projects',

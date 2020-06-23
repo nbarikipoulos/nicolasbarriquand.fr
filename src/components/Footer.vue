@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import content from '@/mixins/content'
+import { content } from '@/mixins'
 
 export default {
   name: 'Footer',
