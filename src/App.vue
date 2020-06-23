@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import * as Sections from '@/components/sections'
+import * as Sections from '@/components'
 import MyFooter from '@/components/Footer'
 import { content } from '@/mixins'
 
