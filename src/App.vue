@@ -3,14 +3,13 @@
     b-navbar(type="is-primary" fixed-top)
       template(slot="end")
         b-navbar-item(
-          v-for="(item, index) in getNavItems()"
+          v-for="(item, index) in navItems"
           :href="`#${item['anchor']}`"
           :key="index"
         ) {{ item['label'] }}
-    template(v-for="(component, index) in getComponentData()")
+    template(v-for="(section, index) in sections")
       component(
-        :is="component.name"
-        :content="component.data"
+        v-bind="section"
         :key="index"
     )
     my-footer(:content="getContent('footer')")
@@ -33,17 +32,18 @@ export default {
   name: 'app',
   mixins: [content],
   components: { ...Sections, MyFooter },
-  data: _ => ({ sections: sectionstoDisplay }),
-  methods: {
-    getComponentData () {
-      return this.sections.map(key => ({
-        name: key,
-        data: this.getContent('sections', key)
+  data: _ => ({ sectionIds: sectionstoDisplay }),
+  computed: {
+    sectionContent: function () { return this.getContent('sections') },
+    sections: function () {
+      return this.sectionIds.map(key => ({
+        is: key,
+        content: this.sectionContent[key]
       }))
     },
-    getNavItems () {
-      return this.sections
-        .map(key => this.getContent('sections', key).nav)
+    navItems: function () {
+      return this.sectionIds
+        .map(key => this.sectionContent[key].nav)
         .filter(elt => undefined !== elt)
     }
   }
