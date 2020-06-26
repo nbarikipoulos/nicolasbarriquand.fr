@@ -21,26 +21,13 @@
       div(class="tile is-ancestor")
         div(class="tile is-parent is-half")
           div(class="tile is-child box")
-            //- FIXME to factorize
             p(class="has-text-centered subtitle is-5") {{ getContent('text', 'figure.title') }}
-              div(class="tile is-ancestor")
-                div(class="tile is-parent is-vertical is-5")
-                  Figure(
-                    class="tile is-child box has-text-centered",
-                    v-bind="getContent('figures', 'xp')"
-                  )
-                  Figure(
-                    class="tile is-child box has-text-centered",
-                    v-bind="getContent('figures', 'project')"
-                  )
-                div(class="tile is-parent is-vertical is-7")
-                  div(class="tile is-child box")
-                    Figure(
-                      class="tile is-child has-text-centered",
-                      v-bind="getContent('figures', 'client')"
-                    )
-                    div(class="tile is-child image is-16by9")
-                      img(src="@/assets/pig.gif")
+              div(class="tile is-parent is-vertical")
+                Figure(
+                  v-for="figure in getContent('figures')"
+                  class="tile is-child",
+                  v-bind="figure"
+                )
         div(class="tile is-parent is-half")
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ getContent('text', 'skill.title') }}

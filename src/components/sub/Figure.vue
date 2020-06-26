@@ -4,7 +4,7 @@
       class="is-size-3 has-text-weight-bold has-text-primary"
     ) {{ value }}
     span(
-      class="is-size-6 has-text-weight-bold"
+      class="is-size-5-mobile"
     )  {{ label }}
 </template>
 
