@@ -5,7 +5,7 @@
         b-navbar-item(
           v-for="(item, index) in navItems"
           :key="index"
-          v-scroll-to="`#${item['anchor']}`"
+          v-scroll-to="scroll(item, index)"
         ) {{ item['label'] }}
     template(v-for="(section, index) in sections")
       component(
@@ -45,6 +45,15 @@ export default {
       return this.sectionIds
         .map(key => this.sectionContent[key].nav)
         .filter(elt => undefined !== elt)
+    }
+  },
+  methods: {
+    scroll (item, index) {
+      // `#${item['anchor']}`
+      return {
+        el: `#${item.anchor}`,
+        offset: index ? -10 : -100
+      }
     }
   }
 }
