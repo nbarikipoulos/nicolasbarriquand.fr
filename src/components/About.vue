@@ -62,7 +62,7 @@ export default {
   mixins: [content],
   components: { Figure },
   computed: {
-    skillTextParts: function () {
+    skillTextParts () {
       const paragraph = this.getContent('skill.text')
       return [
         { content: paragraph.ok, icon: { icon: 'ok', type: 'is-success' } },

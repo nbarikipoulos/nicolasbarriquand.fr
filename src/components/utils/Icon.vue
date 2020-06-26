@@ -15,7 +15,7 @@ export default {
     icon: [Object, String],
     type: { type: String, default: 'is-icon' }
   },
-  mounted: function () {
+  mounted () {
     this.icoObject = typeof this.icon === 'string'
       ? iconStore.get(this.icon)
       : this.ico

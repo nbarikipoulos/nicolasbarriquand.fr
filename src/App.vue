@@ -34,14 +34,14 @@ export default {
   components: { ...Sections, MyFooter },
   data: _ => ({ sectionIds: sectionstoDisplay }),
   computed: {
-    sectionContent: function () { return this.getContent('sections') },
-    sections: function () {
+    sectionContent () { return this.getContent('sections') },
+    sections () {
       return this.sectionIds.map(key => ({
         is: key,
         content: this.sectionContent[key]
       }))
     },
-    navItems: function () {
+    navItems () {
       return this.sectionIds
         .map(key => this.sectionContent[key].nav)
         .filter(elt => undefined !== elt)
