@@ -2,19 +2,23 @@
   section(class="section" :id="getContent('nav', 'anchor')")
     div(class="section-heading")
       h1(class="title") {{ getContent('title') }}
-
     div(class="container subsection")
       div(class="tile is-ancestor")
-        div(class="tile is-parent is-half")
+        div(
+          v-for="elt in skillTextParts()"
+          class="tile is-parent is-half"
+        )
           div(class="tile is-child box")
-            p(class="has-text-centered subtitle is-5") {{ getContent('text', 'skill.title') }}
-              div(v-for="item in getContent('skill.bars')")
-                p {{ item.name }}
-                b-progress(
-                  :value="item.percent",
-                  :max=100
-                  size="is-medium"
+            p(class="has-text-centered subtitle is-5") {{ elt.content['title'] }}
+            ul(class="fa-ul")
+              li(v-for="item in elt.content['items']")
+                ext-b-icon(
+                  class="fa-li"
+                  v-bind="elt.icon"
                 )
+                p {{ item }}
+    div(class="container subsection")
+      div(class="tile is-ancestor")
         div(class="tile is-parent is-half")
           div(class="tile is-child box")
             //- FIXME to factorize
@@ -37,21 +41,16 @@
                     )
                     div(class="tile is-child image is-16by9")
                       img(src="@/assets/pig.gif")
-    div(class="container subsection")
-      div(class="tile is-ancestor")
-        div(
-          v-for="elt in skillTextParts()"
-          class="tile is-parent is-half"
-        )
+        div(class="tile is-parent is-half")
           div(class="tile is-child box")
-            p(class="has-text-centered subtitle is-5") {{ elt.content['title'] }}
-            ul(class="fa-ul")
-              li(v-for="item in elt.content['items']")
-                ext-b-icon(
-                  class="fa-li"
-                  v-bind="elt.icon"
+            p(class="has-text-centered subtitle is-5") {{ getContent('text', 'skill.title') }}
+              div(v-for="item in getContent('skill.bars')")
+                p {{ item.name }}
+                b-progress(
+                  :value="item.percent",
+                  :max=100
+                  size="is-medium"
                 )
-                p {{ item }}
 </template>
 
 <script>
@@ -63,7 +62,7 @@ export default {
   mixins: [content],
   components: { Figure },
   methods: {
-    skillTextParts () {
+    skillTextParts: function () {
       const paragraph = this.getContent('skill.text')
       return [
         { content: paragraph.ok, icon: { icon: 'ok', type: 'is-success' } },
