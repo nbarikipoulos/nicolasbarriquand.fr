@@ -4,8 +4,8 @@
       template(slot="end")
         b-navbar-item(
           v-for="(item, index) in navItems"
-          :href="`#${item['anchor']}`"
           :key="index"
+          v-scroll-to="`#${item['anchor']}`"
         ) {{ item['label'] }}
     template(v-for="(section, index) in sections")
       component(

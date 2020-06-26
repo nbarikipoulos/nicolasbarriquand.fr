@@ -14,7 +14,8 @@
   "dependencies": {
     "buefy": "^0.8.8",
     "core-js": "^3.6.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.1",
