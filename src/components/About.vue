@@ -5,7 +5,7 @@
     div(class="container subsection")
       div(class="tile is-ancestor")
         div(
-          v-for="elt in skillTextParts()"
+          v-for="elt in skillTextParts"
           class="tile is-parent is-half"
         )
           div(class="tile is-child box")
@@ -61,7 +61,7 @@ export default {
   name: 'About',
   mixins: [content],
   components: { Figure },
-  methods: {
+  computed: {
     skillTextParts: function () {
       const paragraph = this.getContent('skill.text')
       return [
