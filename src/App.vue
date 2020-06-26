@@ -49,7 +49,6 @@ export default {
   },
   methods: {
     scroll (item, index) {
-      // `#${item['anchor']}`
       return {
         el: `#${item.anchor}`,
         offset: index ? -10 : -100
