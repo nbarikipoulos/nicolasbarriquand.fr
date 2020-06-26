@@ -26,7 +26,7 @@
       :active.sync="isModalActive"
       has-modal-card
     )
-      ProjectDetails(:content="content")
+      projectDetails(:content="content")
 </template>
 
 <script>

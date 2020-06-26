@@ -10,7 +10,7 @@
           v-for="project in projects"
           class="column is-half-tablet is-half-desktop is-half-fullhd"
         )
-          Project(:content="project")
+          project(:content="project")
 </template>
 
 <script>
