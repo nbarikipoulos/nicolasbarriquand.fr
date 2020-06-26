@@ -23,13 +23,12 @@
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ getContent('text', 'figure.title') }}
               div(class="tile is-parent is-vertical")
-                fig(
-                  v-for="(figure, index) in getContent('figures')"
-                  :key="index"
-                  class="tile is-child",
-                  v-bind="figure"
+                div(
+                  v-for="figure in getContent('figures')"
+                  class="tile is-child"
                 )
-                  span {{ figure }}
+                  span(class="is-size-3 has-text-weight-bold has-text-primary") {{ figure.value }}
+                  span(class="is-size-5-mobile")  {{ figure.label }}
         div(class="tile is-parent is-half")
           div(class="tile is-child box")
             p(class="has-text-centered subtitle is-5") {{ getContent('text', 'skill.title') }}
@@ -43,13 +42,11 @@
 </template>
 
 <script>
-import Figure from '@/components/sub/Figure'
 import { content } from '@/mixins'
 
 export default {
   name: 'About',
   mixins: [content],
-  components: { fig: Figure },
   computed: {
     skillTextParts () {
       const paragraph = this.getContent('skill.text')
