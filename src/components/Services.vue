@@ -3,13 +3,14 @@
     div(class="section-heading")
       h1(class="title") {{ getContent('title') }}
       p(class="subtitle") {{ getContent('subtitle') }}
-
     div(class="container subsection")
+      //- div
+      //-   p(v-for="[k,v] in getKeys().entries()") {{ k }} / {{ v }}
       div(class="columns is-multiline")
         div(v-for="item in getContent('parts')" class="column is-6")
-          div(class="box")
+          div(class="box nes-container")
             h1(class="has-text-weight-bold")
-              ext-b-icon(:icon="item['icon']")
+              ext-icon(:icon="item['icon']" class="is-size-5 has-text-primary")
               span &nbsp;{{ item.title }}
 </template>
 

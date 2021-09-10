@@ -7,25 +7,30 @@
     )
       div(class="card-header")
         p(class="card-header-title") {{ getContent('position') }}
-        p(v-if="hasDetail" class="card-header-icon")
-          ext-b-icon(icon="ellipsis" type="is-white")
+        p(v-if="hasDetail" class="card-header-icon has-text-white")
+          ext-icon(icon="ellipsis")
       div(class="card-content card-content-project")
         ul(class="fa-ul")
           li(v-for="id in ['company', 'location', 'date']")
-            ext-b-icon(class="fa-li" :icon="id")
+            ext-icon(class="fa-li" :icon="id")
             span {{ getContent(id) }}
         br
         ul(class="fa-ul")
           li
-            ext-b-icon(class="fa-li" icon="briefcase")
+            ext-icon(class="fa-li" icon="briefcase")
             span(style="overflow: hidden;") {{ getContent('desc') }}
       footer(class="card-footer project-footer")
-        b-taglist
-          b-tag(v-for="tag in getContent('keys', 'tech')" :key="tag" type="is-white") {{ tag }}
-    b-modal(
-      :active.sync="isModalActive"
-      has-modal-card
+        div(class="tags")
+          span(
+            v-for="tag in getContent('keys', 'tech')"
+            :key="tag"
+            class="tag"
+          ) {{ tag }}
+    div(
+      class="modal"
+      :class="{'is-active': isModalActive }"
     )
+      div(class="modal-background" @click="isModalActive=false")
       projectDetails(:content="content")
 </template>
 

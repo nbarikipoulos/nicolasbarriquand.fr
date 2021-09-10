@@ -5,16 +5,27 @@
 
     div(class="container subsection")
       div(class="columns is-centered is-white")
-        div(class="column is-8")
-          div(class="columns is-vcentered")
-            div(class="column is-6")
-              figure(class="image is-16by9")
-                img(src="@/assets/location.jpg")
-            div(class="column is-6")
-              p(v-for="item in getContent('items')")
-                ext-b-icon(:icon="item['icon']")
-                span &nbsp;&nbsp;{{ item['type'] }}&nbsp;&nbsp;
-                span(v-html="item['value']")
+        div(class="column is-vcentered")
+          p(v-for="item in getContent('items')")
+            ext-icon(:icon="item['icon']" class="is-size-5 has-text-primary")
+            span &nbsp;&nbsp;{{ item['type'] }}&nbsp;&nbsp;
+            span(v-html="item['value']")
+          //- p
+            //- ext-icon( icon="github" class="has-text-primary" :style="{'margin':'0.1em'}")
+            //- ext-icon( icon="linkedin" class="has-text-primary" :style="{'margin':'0.1em'}")
+
+    //- div(class="container subsection")
+    //-   div(class="columns is-centered is-white")
+    //-     div(class="column is-8")
+    //-       div(class="columns is-vcentered")
+    //-         div(class="column is-6")
+    //-           figure(class="image is-16by9")
+    //-             img(src="@/assets/location.jpg")
+    //-         div(class="column is-6")
+    //-           p(v-for="item in getContent('items')")
+    //-             ext-icon(:icon="item['icon']")
+    //-             span &nbsp;&nbsp;{{ item['type'] }}&nbsp;&nbsp;
+    //-             span(v-html="item['value']")
 </template>
 
 <script>

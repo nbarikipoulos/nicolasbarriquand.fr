@@ -1,16 +1,15 @@
 <template lang="pug">
-  div(class="modal-card" @click="$parent.close()")
+  div(class="modal-card")
     header(class="modal-card-head")
       div(
         class="modal-card-title is-size-6-mobile has-text-bold"
       ) {{ getContent('position') }}
-      b-button(
-        class="is-pulled-right is-primary has-text-white"
-        size="is-medium"
-        rounded
-        v-bind="closeIcon"
-        @click="$parent.close()"
-    )
+      button(
+        class="button is-pulled-right is-small is-primary has-text-white"
+        @click="$parent.isModalActive=false"
+      )
+        span(class="icon")
+          i(class="fas fa-times")
     section(class="modal-card-body")
       div(
         v-for="detail in getContent('details')"
@@ -20,22 +19,23 @@
           p {{ detail['title'] }}
         ul(v-if="detail['elements']" class="fa-ul")
           li(v-for="element in detail['elements']")
-            ext-b-icon(class="fa-li" icon="chevron")
+            ext-icon(class="fa-li" icon="chevron")
             span {{ element }}
     footer(class="modal-card-foot")
-      b-taglist
-        b-tag(v-for="tag in getContent('keys', 'tech')" :key="tag" type="is-white") {{ tag }}
+      div(class="tags")
+        span(
+          v-for="tag in getContent('keys', 'tech')"
+          class="tag"
+          :key="tag"
+          type="is-white"
+        ) {{ tag }}
 </template>
 
 <script>
 import { content } from '@/mixins'
-import iconStore from '@/lib/utils/iconStore'
-
-const ico = iconStore.get('times')
 
 export default {
   name: 'ProjectDetails',
-  mixins: [content],
-  data: _ => ({ closeIcon: { 'icon-pack': ico.pack, 'icon-left': ico.icon } })
+  mixins: [content]
 }
 </script>

@@ -1,9 +1,14 @@
 // My variables
 
-$primary-color: rgb(0, 45, 104);
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+$family-primary: 'Goldman', cursive !important;
 
-$bg: white;
-$text-color: black;
+$primary-color:  rgb(0, 45, 104); //  rgb(0, 45, 104);
+
+$bg: rgb(246, 250, 246);;
+$text-color: $primary-color;
+
+$body-background-color: $bg;
 
 $shadow-color: rgba($primary-color, 1);
 // $shadow: 0 0.5em 1em -0.125em $shadow-color, 0 0px 0 1px $shadow-color;
@@ -25,29 +30,27 @@ $primary: $primary-color;
 $body-background-color: $bg;
 $text: $text-color;
 
-$title-color: darken($primary, 5%);
-$subtitle-color: rgba($title-color, .8);
+$title-color: $primary; //darken($primary, 5%);
+$subtitle-color: $primary; // rgba($title-color, .8);
 
 $link: $primary;
 
-$body-size: 1rem;
+$body-size: 1.25rem;
 
 $radius-large: 0px;
-
-$progress-value-background-color: $primary;
-$progress-border-radius: $radius-large;
 
 $box-shadow: $shadow;
 $box-background-color: $bg-container;
 $box-color: $text-color-container;
 
 $card-header-background-color: $bg-card-head;
-$card-header-color: white; // $text-color-card-head;
+$card-header-color: white; // white; // $text-color-card-head;
 $card-background-color: $bg-container;
 $card-color: $text-color-container;
 $card-footer-border-top: 1px solid $primary;
 $card-shadow: $shadow;
 $card-footer-background-color: $bg-card-footer;
+$card-radius: 0px;
 
 $modal-background-background-color: rgba($bg, 0.9);
 

@@ -12,7 +12,7 @@
   "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
   "dependencies": {
-    "buefy": "^0.8.8",
+    "bulma": "^0.9.3",
     "core-js": "^3.6.1",
     "vue": "^2.6.11",
     "vue-scrollto": "^2.18.1"
