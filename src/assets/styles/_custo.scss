@@ -10,52 +10,12 @@ li {
   margin-bottom: 0.20em;
 }
 
+.dots {
+  border-bottom: .15rem solid $primary;
+}
+
 .section {
-  padding-top: 3.5em;
+  padding-top: 1.5em;
   padding-bottom: 0em;
 }
 
-.subsection {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.section-heading {
-  text-align: center;
-  padding-bottom: 1.8em;
-}
-
-.card {
-  overflow:hidden;
-}
-
-.card.large {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: initial;
-}
-
-.card-content-project {
-  height: 285px;
-  overflow-y: hidden;
-  border-top: 1px solid $primary;
-}
-
-.modal-card-body {
-  border: 1px solid $primary;
-}
-
-.project-footer {
-  padding: 5px;
-}
-
-.is-shady {
-  animation: flyintoright .4s backwards;
-  cursor: pointer;
-  border-radius: 2px;
-  position: relative;
-  transition: all .2s ease-in-out;
-}
-
-.is-shady:hover {
-  box-shadow: 3px 3px 3px $primary, 0 3px 3px $primary;
-}

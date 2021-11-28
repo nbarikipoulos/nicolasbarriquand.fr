@@ -1,83 +1,30 @@
 // My variables
 
-@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
-$family-primary: 'Goldman', cursive !important;
+$light: #ffffff;
+$dark: #1b1b19; // #463534 ; //(188, 151, 199);
+$primary: rgb(31, 127, 165); // lighten($primary, 65%);
 
-$primary-color:  rgb(0, 45, 104); //  rgb(0, 45, 104);
+$body-background-color: $light;
+$text: $dark;
 
-$bg: rgb(246, 250, 246);;
-$text-color: $primary-color;
-
-$body-background-color: $bg;
-
-$shadow-color: rgba($primary-color, 1);
-// $shadow: 0 0.5em 1em -0.125em $shadow-color, 0 0px 0 1px $shadow-color;
-$shadow: 0 0 0 0 $shadow-color, 0 0 0 1px $shadow-color;
-
-$bg-container: $bg; //invert($bg);
-$text-color-container: $text-color; //invert($text-color);
-
-$bg-card-head: $primary-color;
-$text-color-card-head: $text-color; //$primary-color;
-
-$bg-card-footer: $bg-card-head;
-
-$main-icon-color: $primary-color;
-
-// Overriding Bulma variables.
-
-$primary: $primary-color;
-$body-background-color: $bg;
-$text: $text-color;
+$link: $primary;
+$link-hover: $primary;
 
 $title-color: $primary; //darken($primary, 5%);
 $subtitle-color: $primary; // rgba($title-color, .8);
 
-$link: $primary;
+$body-size: 1rem;
+$title-size: 1.5rem;
+$subtitle-size: 1.25rem;
 
-$body-size: 1.25rem;
+$padding: 0.1rem;
 
-$radius-large: 0px;
-
-$box-shadow: $shadow;
-$box-background-color: $bg-container;
-$box-color: $text-color-container;
-
-$card-header-background-color: $bg-card-head;
-$card-header-color: white; // white; // $text-color-card-head;
-$card-background-color: $bg-container;
-$card-color: $text-color-container;
-$card-footer-border-top: 1px solid $primary;
-$card-shadow: $shadow;
-$card-footer-background-color: $bg-card-footer;
-$card-radius: 0px;
-
-$modal-background-background-color: rgba($bg, 0.9);
-
-$modal-card-head-background-color: $primary;
-$modal-card-title-color: white;
-$modal-card-head-border-bottom: 1px solid $primary; 
-$modal-card-body-background-color: $bg;
-$modal-card-foot-border-top: 1px solid $primary;
-$modal-close-right: -25px; // i.e. out of screen
+$section-padding: $padding;
+$section-padding-large: $padding;
+$section-padding-desktop: $padding;
+$section-padding-medium: $padding;
+$section-padding-large: $padding;
 
 $footer-background-color: $primary;
-$footer-color: white;
-$footer-padding: 5px;
-
-$success: green;
-$danger: red;
-
-//
-// Update Color Maps
-//
-
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
-@import "~bulma/sass/utilities/derived-variables";
-
-$extraColors: (
-  "icon": ($main-icon-color, findColorInvert($main-icon-color)),
-);
-
-$colors: map-merge($colors, $extraColors);
+$footer-color: $light;
+$footer-padding: 10px 0px;

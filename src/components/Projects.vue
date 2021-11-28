@@ -1,16 +1,15 @@
 <template lang="pug">
   section(class="section" :id="getContent('nav', 'anchor')")
-    div(class="section-heading")
-      h1(class="title") {{ getContent('title') }}
-      p(class="subtitle") {{ getContent('subtitle') }}
-
-    div(class="container subsection")
-      div(class="columns is-multiline")
-        div(
-          v-for="project in projects"
-          class="column is-half-tablet is-half-desktop is-half-fullhd"
-        )
-          project(:content="project")
+    section-header(
+      :title="getContent('title')"
+      :subtitle="getContent('subtitle')"
+    )
+    div(class="container is-fluid columns is-multiline")
+      div(
+        v-for="project in projects"
+        class="column is-6 px-0"
+      )
+        project(:content="project")
 </template>
 
 <script>
