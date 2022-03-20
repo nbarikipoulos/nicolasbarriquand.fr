@@ -1,20 +1,15 @@
-import Vue from 'vue'
+'use strict'
+
+import { createApp } from 'vue'
 
 import VueScrollTo from 'vue-scrollto'
 
 import App from '@/App.vue'
-import Icon from '@/components/utils/Icon'
-import SectionHeader from '@/components/utils/SectionHeader'
-import json from '@/data/data.json'
+import Icon from '@/components/utils/Icon.vue'
 
-Vue.use(VueScrollTo)
-Vue.component('ExtIcon', Icon)
-Vue.component('SectionHeader', SectionHeader)
+const app = createApp(App)
 
-Vue.config.productionTip = false
+app.use(VueScrollTo)
+app.component('MyIcon', Icon)
 
-new Vue({
-  render: h => h(App, {
-    props: { content: json }
-  })
-}).$mount('#app')
+app.mount('#app')

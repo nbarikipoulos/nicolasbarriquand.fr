@@ -5,59 +5,29 @@
   "scripts": {
     "cipher": "cipher-json cipher ./src/data/*.json",
     "decipher": "cipher-json decipher ./src/data/*.cjson",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "serve-dist": "serve dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ./src/**/*.{js,vue}"
   },
   "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
   "dependencies": {
     "bulma": "^0.9.3",
-    "core-js": "^3.6.1",
-    "vue": "^2.6.11",
-    "vue-scrollto": "^2.18.1"
+    "vue": "^3.2.31",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.1",
-    "@vue/cli-plugin-eslint": "^4.1.1",
-    "@vue/cli-service": "^4.1.1",
-    "@vue/eslint-config-standard": "^5.0.1",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.0.1",
-    "json-cipher-value": "^1.2.0",
-    "node-sass": "^4.13.0",
-    "pug": "^2.0.4",
-    "pug-loader": "^2.4.0",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^8.0.0",
-    "serve": "^11.2.0",
-    "standard": "^14.3.1",
-    "vue-template-compiler": "^2.6.11"
+    "@vitejs/plugin-vue": "^2.2.4",
+    "eslint-plugin-vue": "^8.5.0",
+    "eslint-plugin-vue-pug-sfc": "^1.0.0-alpha.20",
+    "json-cipher-value": "^2.0.3",
+    "pug": "^3.0.2",
+    "sass": "^1.49.9",
+    "vite": "^2.8.6"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nbarikipoulos/barriquand.me.git"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended",
-      "@vue/standard"
-    ],
-    "rules": {
-      "no-console": "off"
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }

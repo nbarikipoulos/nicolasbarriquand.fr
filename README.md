@@ -1,6 +1,6 @@
 # www.barriquand.me
 
-[![JavaScript Style Guide][standard-image]][standard-url]
+<!-- [![JavaScript Style Guide][standard-image]][standard-url] -->
 
 ## Credits
 
