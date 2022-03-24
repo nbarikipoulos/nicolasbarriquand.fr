@@ -9,11 +9,11 @@ footer(class="footer")
           :key="i"
           :href="item['url']",
           target="_blank"
-          class="has-background-white mx-1"
+          class="has-background-white px-1 mx-1"
         )
           my-icon(
-            :icon="item['icon']"
             class="has-text-white"
+            :icon-name="item['icon']"
           )
 </template>
 

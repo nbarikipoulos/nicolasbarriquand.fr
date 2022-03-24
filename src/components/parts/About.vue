@@ -17,9 +17,8 @@ div(class="container is-fluid columns is-multiline is-centered")
           :key="i"
         )
           my-icon(
-            class="fa-li is-size-5 has-text-primary"
-            icon="chevron"
-            :style="{ 'padding-top': 0, 'margin-bottom': '0.20em' }"
+            class="fa-li is-size-5"
+            icon-name="chevron"
           )
           span(class="is-size-5") {{ item.name }}
 </template>

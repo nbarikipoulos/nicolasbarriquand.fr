@@ -7,7 +7,7 @@ div
     )
       my-icon(
         class="fa-li"
-        :icon="id"
+        :icon-name="id"
       )
       span(
         :class="getClass(id)"
@@ -16,7 +16,7 @@ div
     li
       my-icon(
         class="fa-li"
-        icon="code"
+        icon-name="code"
       )
       div(class="tags")
         span(

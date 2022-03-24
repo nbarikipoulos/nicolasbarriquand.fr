@@ -7,10 +7,10 @@ div(class="container is-fluid columns is-multiline")
   )
     h1(class="is-uppercase")
       my-icon(
-        :icon="item['icon']"
-        class="is-size-5 has-text-primary"
+        class="is-size-5 mr-2"
+        :icon-name="item['icon']"
       )
-      span &nbsp;{{ item.title }}
+      span {{ item.title }}
 </template>
 
 <script setup>

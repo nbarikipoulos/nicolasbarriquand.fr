@@ -10,6 +10,5 @@ import Icon from '@/components/utils/Icon.vue'
 const app = createApp(App)
 
 app.use(VueScrollTo)
-app.component('MyIcon', Icon)
-
-app.mount('#app')
+  .component('MyIcon', Icon)
+  .mount('#app')

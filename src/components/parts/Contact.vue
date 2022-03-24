@@ -2,8 +2,15 @@
 div(class="container is-fluid pb-5")
   p
     my-icon(
-      icon="mail"
-      :class="clazz"
+      class="is-size-5 has-text-primary mr-1"
+      icon-name="homy"
+    )
+    span {{ content.location }}
+  p
+    my-icon(
+      class="is-size-5 mr-2"
+      icon-name="mail"
+      size="lg"
     )
     a(:href="`mailto:${mail}`")
       span {{ mail }}
@@ -17,6 +24,5 @@ const props = defineProps({
   content: { type: Object, default: _ => ({}) }
 })
 
-const clazz = computed(_ => 'is-size-5 has-text-primary mr-1')
 const mail = computed(_ => props.content['mail'])
 </script>

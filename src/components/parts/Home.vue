@@ -8,11 +8,11 @@ div(class="section")
       li(
         v-for="(line, i) in content['intro']"
         :key="i"
+        class="mt-1"
       )
         my-icon(
           class="fa-li is-size-5"
-          icon="chevron"
-          :style="{ 'padding-top': 0, 'margin-bottom': '0.20em' }"
+          icon-name="chevron"
         )
         span {{ line }}
 </template>
