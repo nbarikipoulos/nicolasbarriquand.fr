@@ -1,7 +1,7 @@
 <template lang="pug">
 div(class="has-text-left pb-5")
-  h1(class="title is-uppercase has-text-weight-bold dots") {{ title }}
-  p(class="subtitle") {{ subtitle }}
+  h1(class="title is-size-5 dots") {{ title }}
+  p(class="subtitle is-size-6") {{ subtitle }}
 </template>
 
 <script setup>

@@ -1,13 +1,13 @@
 <template lang="pug">
 div(class="container is-fluid columns is-multiline")
   div(
-    v-for="(item, i) in content['parts']"
+    v-for="(item, i) in content['items']"
     :key="i"
     class="column is-4"
   )
     h1(class="is-uppercase")
       my-icon(
-        class="is-size-5 mr-2"
+        class="mr-2"
         :icon-name="item['icon']"
       )
       span {{ item.title }}

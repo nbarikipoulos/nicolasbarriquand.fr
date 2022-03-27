@@ -5,7 +5,10 @@ div(class="container is-fluid columns is-multiline")
     class="column is-6 px-0"
     :key="i"
   )
-    project(:content="project")
+    project(
+      v-if="!project.hide"
+      :content="project"
+    )
 </template>
 
 <script setup>

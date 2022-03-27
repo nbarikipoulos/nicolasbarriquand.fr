@@ -13,9 +13,13 @@ $link-hover: $primary;
 $title-color: $primary; //darken($primary, 5%);
 $subtitle-color: $primary; // rgba($title-color, .8);
 
+$bold: 700;
+
 $body-size: 1rem;
 $title-size: 1.5rem;
-$subtitle-size: 1.25rem;
+$title-weight: $bold;
+$subtitle-size: 1rem; 
+$subtitle-weight: $bold;
 
 $padding: 0.1rem;
 

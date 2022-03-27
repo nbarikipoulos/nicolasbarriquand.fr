@@ -1,29 +1,30 @@
 <template lang="pug">
 div(class="container is-fluid columns is-multiline is-centered")
   div(class="column")
-    p(class="dots subtitle is-5") {{ content['text']['figure.title'] }}
+    p(class="subtitle dots") {{ content['figures']['title'] }}
     div(
-      v-for="(figure, i) in content['figures']"
+      v-for="(figure, i) in content['figures']['items']"
       :key="i"
     )
       span(class="is-size-3 has-text-weight-bold has-text-primary") {{ figure.value }}
-      span(class="is-size-5")  {{ figure.label }}
+      span(class="is-size-6") {{ figure.label }}
   div(class="column")
-    p(class="dots subtitle is-5") {{ content['text']['skill.title'] }}
-    div
-      ul(class="fa-ul")
-        li(
-          v-for="(item, i) in content['skill.bars']" 
-          :key="i"
-        )
-          my-icon(
-            class="fa-li is-size-5"
-            icon-name="chevron"
-          )
-          span(class="is-size-5") {{ item.name }}
+    p(class="subtitle dots") {{ content['skills']['title'] }}
+    my-list(:items="content['skills']['items'].map(item=>item.name)")
+div(class="container is-fluid mb-5")
+  p(class="subtitle dots") {{ content['expertise']['title'] }}
+  expertise(:content="content['expertise']")
+div(class="container is-fluid")
+  p(class="subtitle dots") {{ content['generalities']['title'] }}
+  my-list(
+    :items="content['generalities']['items']"
+    li-class="mt-2"
+  )
 </template>
 
 <script setup>
+/* eslint no-unused-vars : 'off' */
+import { Expertise } from '@/components/parts'
 defineProps({
   content: { type: Object, default: _ => ({}) }
 })

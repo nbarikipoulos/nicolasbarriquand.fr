@@ -35,7 +35,7 @@ const props = defineProps({
 const getClass = (id) => {
   let result
   switch (id) {
-    case 'position': result = 'has-text-weight-bold is-uppercase has-text-primary'; break
+    case 'position': result = 'subtitle'; break
     default: result = ''
   }
   return result

@@ -21,8 +21,8 @@ div(
 <script setup>
 /* eslint no-unused-vars : 'off' */
 import MyMenu from '@/components/Menu.vue'
-import MySection from '@/components/utils/Section.vue'
-import { Home, About, Expertise, Projects, Contact } from '@/components/parts'
+import { Section as MySection } from '@/components/utils'
+import { Home, About, Projects, Contact } from '@/components/parts'
 import MyFooter from '@/components/Footer.vue'
 
 import json from '@/data/data.json'
@@ -41,7 +41,6 @@ const f = (id, is, navLabel, hasHeader = true) => ({
 
 const parts = [
   ['home', Home, 'Home', false],
-  ['services', Expertise, 'Expertise'],
   ['about', About, 'About'],
   ['projects', Projects, 'Projects'],
   ['contact', Contact, 'Contact']

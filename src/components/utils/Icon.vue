@@ -10,8 +10,7 @@ font-awesome-icon(
 import { FontAwesomeIcon, getIcon } from '@/utils/fontawesome'
 
 const props = defineProps({
-  iconName: { type: String, default: 'bug' },
-  color: { type: String, default: 'has-text-primary' }
+  iconName: { type: String, default: 'bug' }
 })
 
 </script>
