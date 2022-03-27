@@ -1,6 +1,6 @@
 <template lang="pug">
 nav(
-  class="navbar is-fixed-top has-background-light"
+  class="navbar is-fixed-top is-transparent mr-1 mt-1"
   id="nav"
 )
   a(
@@ -19,12 +19,12 @@ nav(
       class="has-text-primary"
     )
   div(
-    class="navbar-menu has-background-light"
+    class="navbar-menu"
     role="navigation"
     arial-label="main navigation"
     :ref="el => { divs.push(el) }"
   )
-    div(class="navbar-start has-background-primary px-3 my-2")
+    div(class="navbar-end has-background-primary px-3 mr-1 mt-2")
       div(
         v-for="(item, i) in navItems"
         :key="i"

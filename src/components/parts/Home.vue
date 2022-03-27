@@ -1,7 +1,11 @@
 <template lang="pug">
-p {{ content['hero']['pre.title'] }}
-h1(class="title is-4") {{ content['hero']['title'] }}
-h2(class="subtitle is-4") {{ content['hero']['subtitle'] }}
+div(class="hero is-medium")
+  div(class="hero-body home")
+    div
+      p(class="mb-3")
+        span(class="title is-2 is-size-6-mobile px-1 has-background-primary has-text-light") {{ content['hero']['title'] }}
+      p
+        span(class="subtitle is-3 is-size-6-mobile px-1 has-background-primary has-text-light") {{ content['hero']['subtitle'] }}
 </template>
 
 <script setup>

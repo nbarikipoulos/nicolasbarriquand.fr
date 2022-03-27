@@ -1,14 +1,11 @@
 <template lang="pug">
 div(class="container is-fluid columns is-multiline")
   div(
-    v-for="(project, i) in projects"
-    class="column is-6 px-0"
+    v-for="(project, i) in projects.filter(p => !p.hide)"
+    class="column is-6 px-1"
     :key="i"
   )
-    project(
-      v-if="!project.hide"
-      :content="project"
-    )
+    project(:content="project")
 </template>
 
 <script setup>

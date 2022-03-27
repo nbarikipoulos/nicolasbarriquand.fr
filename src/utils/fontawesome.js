@@ -15,7 +15,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
-  faGithub, faLinkedin
+  faGithubSquare, faLinkedin
 } from '@fortawesome/free-brands-svg-icons'
 
 const _icons = {
@@ -34,7 +34,7 @@ const _icons = {
   'chevron': faAngleRight,
   'homy': faMapLocationDot,
   'mail': faEnvelope,
-  'github': faGithub,
+  'github': faGithubSquare,
   'linkedin': faLinkedin,
   'bug': faBug
 }

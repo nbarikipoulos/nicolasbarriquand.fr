@@ -2,7 +2,7 @@
 
 $light: #ffffff;
 $dark: #1b1b19; // #463534 ; //(188, 151, 199);
-$primary: rgb(31, 127, 165); // lighten($primary, 65%);
+$primary: rgb(160, 15, 39); // lighten($primary, 65%);
 
 $body-background-color: $light;
 $text: $dark;
@@ -23,12 +23,16 @@ $subtitle-weight: $bold;
 
 $padding: 0.1rem;
 
+$hero-body-padding-medium: 5rem 2rem 8rem;
+
+$navbar-height: 2rem;
+
 $section-padding: $padding;
 $section-padding-large: $padding;
 $section-padding-desktop: $padding;
 $section-padding-medium: $padding;
 $section-padding-large: $padding;
 
-$footer-background-color: $primary;
-$footer-color: $light;
+$footer-background-color: $body-background-color;
+$footer-color: $primary;
 $footer-padding: 10px 0px;

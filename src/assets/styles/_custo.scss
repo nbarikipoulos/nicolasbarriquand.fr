@@ -5,6 +5,13 @@
   font-family: $family-primary;
 }
 
+.home {
+  background: url(assets/cpc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
 li {
   padding-top: 0;
   margin-bottom: 0.20em;

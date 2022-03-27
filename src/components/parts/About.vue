@@ -5,6 +5,7 @@ div(class="container is-fluid columns is-multiline is-centered")
     div(
       v-for="(figure, i) in content['figures']['items']"
       :key="i"
+      class="mx-4"
     )
       span(class="is-size-3 has-text-weight-bold has-text-primary") {{ figure.value }}
       span(class="is-size-6") {{ figure.label }}
@@ -13,12 +14,15 @@ div(class="container is-fluid columns is-multiline is-centered")
     my-list(:items="content['skills']['items'].map(item=>item.name)")
 div(class="container is-fluid mb-5")
   p(class="subtitle dots") {{ content['expertise']['title'] }}
-  expertise(:content="content['expertise']")
+  expertise(
+    class="pl-5"
+    :content="content['expertise']"
+  )
 div(class="container is-fluid")
   p(class="subtitle dots") {{ content['generalities']['title'] }}
   my-list(
     :items="content['generalities']['items']"
-    li-class="mt-2"
+    li-class="mt-3"
   )
 </template>
 
