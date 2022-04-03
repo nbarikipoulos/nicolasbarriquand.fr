@@ -9,7 +9,7 @@ ul(class="fa-ul")
       class="fa-li"
       :icon-name="iconName"
     )
-    span(class="") {{ item }}
+    span {{ item }}
 </template>
 
 <script setup>
