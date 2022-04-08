@@ -11,7 +11,10 @@ div(class="container is-fluid columns is-multiline is-centered")
       span(class="is-size-6") {{ figure.label }}
   div(class="column")
     p(class="subtitle dots") {{ content['skills']['title'] }}
-    my-list(:items="content['skills']['items'].map(item=>item.name)")
+    my-list(
+      :items="content['skills']['items'].map(item=>item.name)"
+      icon-color="has-text-primary"
+    )
 div(class="container is-fluid mb-5")
   p(class="subtitle dots") {{ content['expertise']['title'] }}
   expertise(
@@ -23,6 +26,7 @@ div(class="container is-fluid")
   my-list(
     :items="content['generalities']['items']"
     li-class="mt-3"
+    icon-color="has-text-primary"
   )
 </template>
 

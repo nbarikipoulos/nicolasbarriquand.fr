@@ -2,7 +2,7 @@
 div(class="container is-fluid columns is-multiline")
   div(
     v-for="(project, i) in projects.filter(p => !p.hide)"
-    class="column is-6 px-1"
+    class="column is-6"
     :key="i"
   )
     project(:content="project")

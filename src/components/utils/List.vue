@@ -7,6 +7,7 @@ ul(class="fa-ul")
   )
     my-icon(
       class="fa-li"
+      :class="iconColor"
       :icon-name="iconName"
     )
     span {{ item }}
@@ -16,7 +17,8 @@ ul(class="fa-ul")
 defineProps({
   items: { type: Array, default: _ => [] },
   iconName: { type: String, default: 'chevron' },
-  liClass: { type: String, default: '' }
+  liClass: { type: String, default: '' },
+  iconColor: { type: String, default: ''}
 })
 
 </script>

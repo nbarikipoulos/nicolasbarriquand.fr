@@ -1,6 +1,5 @@
 <template lang="pug">
 font-awesome-icon(
-  class="has-text-primary"
   :icon="getIcon(iconName) ?? icons['bug']"
 )
 </template>

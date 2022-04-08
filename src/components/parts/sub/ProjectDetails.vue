@@ -7,7 +7,7 @@ div(
   div(class="modal-card")
     header(class="modal-card-head")
       h1(
-        class="modal-card-title subtitle is-size-6-mobile"
+        class="modal-card-title subtitle is-size-6-mobile has-text-light"
       ) {{ content.position }}
     section(class="modal-card-body")
       div(class="columns columns is-multiline")
@@ -17,12 +17,15 @@ div(
           class="column has-text-left is-narrow"
         )
           my-icon(
-            class="mr-1"
+            class="mr-1 has-text-primary"
             :icon-name="id"
           )
           span {{ content[id] }}
       p(class="subtitle is-size-6")
-        my-icon(class="mr-1" icon-name="desc") 
+        my-icon(
+          class="mr-2 has-text-primary"
+          icon-name="desc"
+        )
         span {{ content.desc }}
       div(
         v-for="(part, i) in content.details"
@@ -30,9 +33,15 @@ div(
       )
         div
           p 
-             my-icon(icon-name="double-chevron")
+             my-icon(
+               class="mr-1 has-text-primary"
+               icon-name="double-chevron"
+               )
              span(class="pl-2 subtitle is-size-6") {{ part.title }}
-          my-list(:items="part.elements")
+          my-list(
+            icon-color="has-text-primary"
+            :items="part.elements"
+          )
 
     footer(class="modal-card-foot")
       my-tags(

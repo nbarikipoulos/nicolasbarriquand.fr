@@ -7,10 +7,9 @@ footer(class="footer")
         :key="i"
         :href="item['url']",
         target="_blank"
-        class="has-background-white pl-1"
       )
         my-icon(
-          class="is-size-4"
+          class="pl-2 is-size-4"
           :icon-name="item['icon']"
         )
     div(class="column is-narrow")

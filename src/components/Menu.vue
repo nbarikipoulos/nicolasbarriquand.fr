@@ -24,7 +24,7 @@ nav(
     arial-label="main navigation"
     :ref="el => { divs.push(el) }"
   )
-    div(class="navbar-end has-background-primary px-3 mr-1 mt-2")
+    div(class="navbar-end has-background-primary px-3 mr-1 my-1")
       div(
         v-for="(item, i) in navItems"
         :key="i"

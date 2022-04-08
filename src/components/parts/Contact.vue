@@ -1,14 +1,14 @@
 <template lang="pug">
-div(class="container is-fluid pb-5")
+div(class="container is-fluid pt-4")
   p
     my-icon(
-      class="is-size-5 has-text-primary mr-1"
+      class="is-size-5 has-text-primary mr-2"
       icon-name="homy"
     )
     span {{ content.location }}
   p
     my-icon(
-      class="is-size-5 mr-2"
+      class="is-size-5 mr-2 has-text-primary"
       icon-name="mail"
       size="lg"
     )

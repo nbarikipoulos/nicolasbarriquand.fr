@@ -7,7 +7,7 @@ div(class="container is-fluid columns is-multiline")
   )
     h1(class="is-uppercase")
       my-icon(
-        class="mr-2"
+        class="mr-2 has-text-primary"
         :icon-name="item['icon']"
       )
       span {{ item.title }}

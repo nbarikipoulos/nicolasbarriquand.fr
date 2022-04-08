@@ -1,8 +1,11 @@
 <template lang="pug">
-div
+div(
+  :class="hasDetails ? 'is-clickable': ''"
+  @click="openModal()"
+)
   my-icon(
     v-if="hasDetails"
-    class="is-pulled-right is-clickable ml-5" 
+    class="is-pulled-right is-clickable has-text-primary" 
     icon-name="open"  
     @click="openModal()"
     size="lg"
@@ -13,7 +16,7 @@ div
       :key="id"
     )
       my-icon(
-        class="mr-2"
+        class="mr-2 has-text-primary"
         :icon-name="id"
       )
       span(
@@ -21,18 +24,18 @@ div
       ) {{ content[id] }}
     li
       my-icon(
-        class="mr-2"
+        class="mr-2 has-text-primary"
         icon-name="code"
       )
       my-tags(
         class="is-uppercase has-background-primary has-text-light has-text-weight-bold"
         :items="content['keys']['tech']"
       )
-  project-details(
-    v-if="hasDetails"
-    :content="content"
-    v-model="showModal"
-  )
+project-details(
+  v-if="hasDetails"
+  :content="content"
+  v-model="showModal"
+)
 </template>
 
 <script setup>
@@ -56,7 +59,7 @@ const openModal = _ => { showModal.value = true }
 const getClass = (id) => {
   let result
   switch (id) {
-    case 'position': result = 'subtitle'; break
+    case 'position': result = 'subtitle has-text-primary'; break
     default: result = ''
   }
   return result

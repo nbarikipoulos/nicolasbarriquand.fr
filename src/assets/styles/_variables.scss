@@ -1,17 +1,19 @@
 // My variables
 
 $light: #ffffff;
-$dark: #1b1b19; // #463534 ; //(188, 151, 199);
-$primary: rgb(160, 15, 39); // lighten($primary, 65%);
+$dark: #1b1b19;
+$primary: rgba(22, 135, 150, 0.9);
 
-$body-background-color: $light;
-$text: $dark;
+$body-background-color: $dark;
+$text: $light;
 
 $link: $primary;
 $link-hover: $primary;
 
-$title-color: $primary; //darken($primary, 5%);
-$subtitle-color: $primary; // rgba($title-color, .8);
+$title-color: $light;
+$subtitle-color: $light;
+$dots-color: $primary;
+
 
 $bold: 700;
 
@@ -24,7 +26,9 @@ $subtitle-weight: $bold;
 $padding: 0.1rem;
 
 $hero-body-padding-medium: 5rem 2rem 8rem;
+$hero-body-padding:  5rem 0.5rem 5rem;
 
+$navbar-background-color: transparent;
 $navbar-height: 2rem;
 
 $section-padding: $padding;
@@ -40,4 +44,5 @@ $footer-padding: 10px 0px;
 $radius-large: 0px;
 
 $modal-card-head-background-color: $primary;
-$modal-card-title-color: $light;
+$modal-card-body-background-color: $dark;
+$modal-card-title-color: $dark;
