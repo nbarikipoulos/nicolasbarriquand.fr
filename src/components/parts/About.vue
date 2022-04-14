@@ -7,7 +7,7 @@ div(class="container is-fluid columns is-multiline is-centered")
       :key="i"
       class="mx-4"
     )
-      span(class="is-size-3 has-text-weight-bold has-text-primary") {{ figure.value }}
+      span(class="is-size-3 mr-1 has-text-weight-bold has-text-primary") {{ figure.value }}
       span(class="is-size-6") {{ figure.label }}
   div(class="column")
     p(class="subtitle dots") {{ content['skills']['title'] }}

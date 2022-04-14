@@ -59,7 +59,7 @@ const openModal = _ => { showModal.value = true }
 const getClass = (id) => {
   let result
   switch (id) {
-    case 'position': result = 'subtitle has-text-primary'; break
+    case 'position': result = 'subtitle'; break
     default: result = ''
   }
   return result
