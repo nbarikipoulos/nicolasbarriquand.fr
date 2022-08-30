@@ -29,7 +29,7 @@
     "json-cipher-value": "^2.0.3",
     "pug": "^3.0.2",
     "sass": "^1.49.9",
-    "vite": "^2.8.6"
+    "vite": "^2.9.13"
   },
   "repository": {
     "type": "git",
