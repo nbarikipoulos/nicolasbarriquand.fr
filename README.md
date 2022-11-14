@@ -1,4 +1,4 @@
-# www.barriquand.me
+# www.nicolasbarriquand.com
 
 <!-- [![JavaScript Style Guide][standard-image]][standard-url] -->
 

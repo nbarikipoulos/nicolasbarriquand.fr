@@ -1,7 +1,7 @@
 {
-  "name": "www.barriquand.me",
+  "name": "www.nicolasbarriquand.com",
   "version": "2.1.0",
-  "description": "www.barriquand.me",
+  "description": "www.nicolasbarriquand.com",
   "scripts": {
     "cipher": "cipher-json cipher ./src/data/*.json",
     "decipher": "cipher-json decipher ./src/data/*.cjson",
