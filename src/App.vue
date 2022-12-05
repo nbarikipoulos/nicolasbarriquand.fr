@@ -19,7 +19,6 @@ div(
 </template>
 
 <script setup>
-/* eslint no-unused-vars : 'off' */
 import MyMenu from '@/components/Menu.vue'
 import { Section as MySection } from '@/components/utils'
 import { Home, About, Projects, Contact } from '@/components/parts'
