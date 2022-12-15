@@ -1,38 +1,29 @@
 <template lang="pug">
-div(class="container is-fluid columns is-multiline is-centered")
-  div(class="column")
-    p(class="subtitle dots") {{ content['figures']['title'] }}
-    div(
-      v-for="(figure, i) in content['figures']['items']"
-      :key="i"
-      class="mx-4"
-    )
-      span(class="is-size-3 mr-1 has-text-weight-bold has-text-primary") {{ figure.value }}
-      span(class="is-size-6") {{ figure.label }}
-  div(class="column")
-    p(class="subtitle dots") {{ content['skills']['title'] }}
-    my-list(
-      :items="content['skills']['items'].map(item=>item.name)"
-      icon-color="has-text-primary"
-    )
-div(class="container is-fluid mb-5")
-  p(class="subtitle dots") {{ content['expertise']['title'] }}
-  expertise(
-    class="pl-5"
-    :content="content['expertise']"
+v-row
+  v-col(
+    cols="12"
+    sm="12"
+    md="6"
+    xl="3"
   )
-div(class="container is-fluid")
-  p(class="subtitle dots") {{ content['generalities']['title'] }}
-  my-list(
-    :items="content['generalities']['items']"
-    li-class="mt-3"
-    icon-color="has-text-primary"
+    figures(:content="content['figures']")
+  v-col(
+    cols="12"
+    sm="12"
+    md="6"
+    xl="3"
   )
+    skills(:content="content['skills']")
+  v-col(
+    sm="12"
+    xl="6"
+  )
+    misc(:content="content['generalities']")
 </template>
 
 <script setup>
-/* eslint no-unused-vars : 'off' */
-import { Expertise } from '@/components/parts'
+import { Figures, Skills, Misc } from '@/components/parts/sub'
+
 defineProps({
   content: { type: Object, default: _ => ({}) }
 })

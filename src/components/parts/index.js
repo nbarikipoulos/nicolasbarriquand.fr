@@ -1,5 +1,5 @@
 export { default as Home } from './Home.vue'
 export { default as About } from './About.vue'
 export { default as Expertise } from './Expertise.vue'
-export { default as Projects } from './Projects.vue'
+export { default as WorkExperience } from './WorkExperience.vue'
 export { default as Contact } from './Contact.vue'

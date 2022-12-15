@@ -1,6 +1,6 @@
 {
   "name": "www.nicolasbarriquand.com",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "www.nicolasbarriquand.com",
   "scripts": {
     "cipher": "cipher-json cipher ./src/data/*.json",
@@ -13,28 +13,25 @@
   "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/vue-fontawesome": "^3.0.0-5",
-    "bulma": "^0.9.3",
-    "vue": "^3.2.31",
-    "vue-scrollto": "^2.20.0"
+    "@mdi/font": "7.0.96",
+    "roboto-fontface": "*",
+    "vue": "^3.2.45",
+    "vuetify": "^3.0.3",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
-    "@volar/vue-language-plugin-pug": "^1.0.9",
+    "@volar/vue-language-plugin-pug": "^1.0.11",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-vue": "^9.7.0",
-    "eslint-plugin-vue-pug": "^0.5.4",
+    "eslint-plugin-vue-pug": "^0.5.5",
+    "eslint-plugin-vuetify": "^2.0.0-beta.2",
     "json-cipher-value": "^2.0.3",
     "pug": "^3.0.2",
-    "sass": "^1.56.1",
-    "vite": "^3.2.3"
+    "vite": "^3.2.5",
+    "vite-plugin-vuetify": "^1.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nbarikipoulos/barriquand.me.git"
+    "url": "https://github.com/nbarikipoulos/nicolasbarriquand.com.git"
   }
 }

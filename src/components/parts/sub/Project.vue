@@ -1,67 +1,113 @@
 <template lang="pug">
-div(
-  :class="hasDetails ? 'is-clickable': ''"
-  @click="openModal()"
+v-card(
+  class="mx-auto"
+  color="primary-darken-1"
+  density="compact"
 )
-  my-icon(
-    v-if="hasDetails"
-    class="is-pulled-right is-clickable has-text-primary" 
-    icon-name="open"  
-    @click="openModal()"
-    size="lg"
-  )
-  ul
-    li(
-      v-for="id in ['position', 'company', 'date', 'desc']"
-      :key="id"
+  template(#title)
+    v-icon(
+      class="mr-1"
+      :icon="items['company'].icon"
     )
-      my-icon(
-        class="mr-2 has-text-primary"
-        :icon-name="id"
-      )
-      span(
-        :class="getClass(id)"
-      ) {{ content[id] }}
-    li
-      my-icon(
-        class="mr-2 has-text-primary"
-        icon-name="code"
-      )
-      my-tags(
-        class="is-uppercase has-background-primary has-text-light has-text-weight-bold"
-        :items="content['keys']['tech']"
-      )
-project-details(
-  v-if="hasDetails"
-  :content="content"
-  v-model="showModal"
-)
+    span {{ items['company'].content }}
+  template(#subtitle)
+    span(class="") {{ items['position'].content }}
+  //- v-divider(color="secondary")
+  v-list(
+    density="compact"
+  )
+    v-list-item(
+      v-for="(prop, i) in ['date', 'desc']"
+      :key="i"
+      :class="items[prop].clazz"
+    )
+      template(#prepend)
+        v-icon(
+          class="mr-1"
+          :icon="items[prop].icon"
+          color="primary-darken-1"
+        )
+      span {{ items[prop].content }}
+    v-list-item(v-if="hasDetails")
+      div(class="d-flex flex-row")
+        v-btn(
+          color="primary-darken-1"
+          variant="tonal"
+          size="small"
+          @click="show = !show"
+        ) {{ expandButtonLabel }}
+        v-spacer
+        v-btn(
+          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+          variant="plain"
+          density="compact"
+          color="primary-darken-1"
+          @click="show = !show"
+        )
+      v-expand-x-transition
+        v-list-item(v-show="show")
+          project-desc(:content="content['details']")
+          v-divider(color="primary")
+    //- Tech
+    v-list-item
+      template(#prepend)
+        v-icon(
+          icon="mdi-code-braces"
+          size="large"
+          color="primary-darken-1"
+        )
+      v-chip(
+        v-for="(tech, i) in content.keys.tech"
+        :key="i"
+        class="mb-1 mr-1"
+        variant="elevated"
+        size="small"
+        color="primary-darken-1"
+        label
+      ) {{ tech }}
 </template>
 
 <script setup>
-/* eslint no-unused-vars : 'off' */
-import { ref, computed, watch } from 'vue'
-import { root } from '@/utils'
-import ProjectDetails from './ProjectDetails.vue'
+import ProjectDesc from './ProjectDesc.vue'
+import { ref, computed } from 'vue'
+import { formatDateRange } from '@/utils/misc'
 
 const props = defineProps({
   content: { type: Object, default: _ => ({}) }
 })
 
-const hasDetails = computed(_ => { return 'details' in props.content })
+const f = (d) => formatDateRange(d.start, d.end, 'long')
 
-const showModal = ref(false)
+const show = ref(false)
 
-watch(showModal, _ => { root.style.overflow = showModal.value ? 'hidden' : 'auto' })
+const hasDetails = computed(_ => 'details' in props.content)
+const expandButtonLabel = computed(_ => show.value ? 'Less...' : 'More...')
 
-const openModal = _ => { showModal.value = true }
-
-const getClass = (id) => {
-  let result
-  switch (id) {
-    case 'position': result = 'subtitle'; break
-    default: result = ''
+const items = {
+  position: {
+    icon: 'mdi-badge-account-outline',
+    clazz: '',
+    content: props.content.position
+  },
+  company: {
+    icon: 'mdi-domain',
+    clazz: 'text-h6 bg-primary',
+    content: props.content.company
+  },
+  location: {
+    icon: 'mdi-earth',
+    clazz: '',
+    content: props.content.location
+  },
+  date: {
+    icon: 'mdi-calendar-month',
+    clazz: '',
+    content: f(props.content.date)
+  },
+  desc: {
+    icon: 'mdi-toolbox',
+    clazz: 'text-justify',
+    content: props.content.desc
   }
-  return result
 }
 </script>

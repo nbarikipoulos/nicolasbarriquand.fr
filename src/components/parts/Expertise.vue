@@ -1,16 +1,26 @@
 <template lang="pug">
-div(class="container is-fluid columns is-multiline")
-  div(
+v-row(no-gutters)
+  v-col(
     v-for="(item, i) in content['items']"
     :key="i"
-    class="column is-4"
+    cols="12"
+    md="6"
+    lg="4"
   )
-    h1(class="is-uppercase")
-      my-icon(
-        class="mr-2 has-text-primary"
-        :icon-name="item['icon']"
+    v-sheet(class="ma-1 pa-1")
+      v-card(
+        class="mx-auto"
+        density="compact"
+        border
       )
-      span {{ item.title }}
+        template(#prepend)
+          v-icon(
+            class="mr-1"
+            :icon="item.icon"
+            color="primary-darken-1"
+        )
+        template(#title)
+          span(class="text-body-1 text-primary font-weight-black") {{ item.title }}
 </template>
 
 <script setup>

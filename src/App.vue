@@ -1,54 +1,45 @@
 <template lang="pug">
-div(
-  id="app"
-  class="is-unselectable has-text-justified"
-)
-  my-menu(:nav-items="navItems")
-  my-section(
-    v-for="part in parts"
-    :key="part.id"
-    :header="part.header"
-    :id="part.nav.anchor"
-  )
-    template(#default)
-      component(
-        :is="part.is"
-        :content="part.content"
-      )
-  my-footer(:content="json.footer")
+v-app
+  v-main
+    navigation(:items="parts.map(p=>p.nav)")
+    home(
+      id="home"
+      :content="getContent('home')"
+    )
+    my-part(
+      v-for="(item, i) in parts"
+      :id="item.id"
+      :key="i"
+      :title="getContent(item.id).title"
+    )
+      template(#default)
+        component(
+          :is="item.component"
+          :content="getContent(item.id)"
+        )
+    my-footer(:content="json['footer']")
 </template>
 
 <script setup>
-import MyMenu from '@/components/Menu.vue'
-import { Section as MySection } from '@/components/utils'
-import { Home, About, Projects, Contact } from '@/components/parts'
+import { Home, About, Expertise, Contact, WorkExperience } from '@/components/parts'
 import MyFooter from '@/components/Footer.vue'
+import Navigation from '@/components/Navigation.vue'
 
 import json from '@/data/data.json'
 
-const f = (id, is, navLabel, hasHeader = true) => ({
+const getContent = (id) => json.parts[id]
+
+// f(component id, component, nav icon, nav label, nav target)
+const f = (id, component, icon, label, target = id) => ({
   id,
-  is,
-  header: {
-    hide: !hasHeader,
-    title: json.sections[id].title,
-    subtitle: json.sections[id].subtitle
-  },
-  content: json.sections[id],
-  nav: { label: navLabel, anchor: id }
+  component,
+  nav: { icon, label, target }
 })
 
 const parts = [
-  ['home', Home, 'Home', false],
-  ['about', About, 'About'],
-  ['projects', Projects, 'Projects'],
-  ['contact', Contact, 'Contact']
-].map(d => f(...d))
-
-const navItems = parts.map(item => item.nav)
-
+  ['about', About, 'mdi-information-variant', 'About', 'home'],
+  ['expertise', Expertise, 'mdi-account-hard-hat-outline', 'Expertise'],
+  ['xp', WorkExperience, 'mdi-gamepad-variant-outline', 'XP'],
+  ['contact', Contact, 'mdi-at', 'Contact']
+].map(a => f(...a))
 </script>
-
-<style lang="scss">
-  @import "@/assets/styles/main";
-</style>
