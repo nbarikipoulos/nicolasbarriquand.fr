@@ -1,6 +1,6 @@
 {
   "name": "www.nicolasbarriquand.com",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "www.nicolasbarriquand.com",
   "scripts": {
     "cipher": "cipher-json cipher ./src/data/*.json",
