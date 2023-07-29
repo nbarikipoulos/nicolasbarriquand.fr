@@ -13,22 +13,22 @@
   "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
   "dependencies": {
-    "@mdi/font": "7.0.96",
+    "@mdi/font": "7.2.96",
     "roboto-fontface": "*",
-    "vue": "^3.2.45",
-    "vuetify": "^3.0.3",
+    "vue": "^3.3.4",
+    "vuetify": "^3.3.10",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.2.0",
-    "@volar/vue-language-plugin-pug": "^1.0.11",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-vue-pug": "^0.5.5",
-    "eslint-plugin-vuetify": "^2.0.0-beta.2",
-    "json-cipher-value": "^3.0.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/language-plugin-pug": "^1.8.8",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-vue-pug": "^0.6.0",
+    "eslint-plugin-vuetify": "^2.0.5",
+    "json-cipher-value": "^3.0.1",
     "pug": "^3.0.2",
-    "vite": "^3.2.5",
-    "vite-plugin-vuetify": "^1.0.0"
+    "vite": "^4.4.7",
+    "vite-plugin-vuetify": "^1.0.2"
   },
   "repository": {
     "type": "git",
