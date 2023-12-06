@@ -27,7 +27,7 @@
     "eslint-plugin-vuetify": "^2.0.5",
     "json-cipher-value": "^3.0.1",
     "pug": "^3.0.2",
-    "vite": "^4.4.7",
+    "vite": "^4.4.12",
     "vite-plugin-vuetify": "^1.0.2"
   },
   "repository": {
