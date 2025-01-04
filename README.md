@@ -1,4 +1,4 @@
-# www.nicolasbarriquand.com
+# www.nicolasbarriquand.fr
 
 [![JavaScript Style Guide][standard-image]][standard-url]
 

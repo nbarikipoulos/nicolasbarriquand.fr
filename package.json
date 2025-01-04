@@ -1,7 +1,7 @@
 {
-  "name": "www.nicolasbarriquand.com",
+  "name": "www.nicolasbarriquand.fr",
   "version": "3.0.5",
-  "description": "www.nicolasbarriquand.com",
+  "description": "www.nicolasbarriquand.fr",
   "scripts": {
     "cipher": "cipher-json cipher ./src/data/*.json",
     "decipher": "cipher-json decipher ./src/data/*.cjson",
@@ -32,6 +32,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nbarikipoulos/nicolasbarriquand.com.git"
+    "url": "https://github.com/nbarikipoulos/nicolasbarriquand.fr.git"
   }
 }
