@@ -1,6 +1,7 @@
 import vue from 'eslint-plugin-vue'
 import vuetify from 'eslint-plugin-vuetify'
 import vuePug from 'eslint-plugin-vue-pug'
+import neostandard from 'neostandard'
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 
@@ -10,6 +11,7 @@ const compatPug = new FlatCompat({
 
 export default [
   js.configs.recommended,
+  ...neostandard({}),
   ...vue.configs['flat/recommended'],
   ...vuetify.configs['flat/recommended'],
   ...compatPug.extends('plugin:vue-pug/vue3-recommended'),

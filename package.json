@@ -27,6 +27,7 @@
     "eslint-plugin-vue-pug": "^0.6.2",
     "eslint-plugin-vuetify": "^2.5.1",
     "json-cipher-value": "^3.0.1",
+    "neostandard": "^0.12.1",
     "pug": "^3.0.3",
     "vite": "^6.0.11",
     "vite-plugin-vuetify": "^2.0.4"
