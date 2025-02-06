@@ -2,6 +2,7 @@
   "name": "www.nicolasbarriquand.fr",
   "version": "3.0.6",
   "description": "www.nicolasbarriquand.fr",
+  "type": "module",
   "scripts": {
     "cipher": "cipher-json cipher ./src/data/*.json",
     "decipher": "cipher-json decipher ./src/data/*.cjson",
@@ -13,22 +14,22 @@
   "author": "Nicolas Bariquand <nicolas.barriquand@outlook.fr>",
   "license": "MIT",
   "dependencies": {
-    "@mdi/font": "7.2.96",
+    "@mdi/font": "7.4.47",
     "roboto-fontface": "*",
-    "vue": "^3.3.4",
-    "vuetify": "^3.3.10",
+    "vue": "^3.5.13",
+    "vuetify": "^3.7.7",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vue/language-plugin-pug": "^1.8.8",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-vue-pug": "^0.6.0",
-    "eslint-plugin-vuetify": "^2.0.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/language-plugin-pug": "^2.2.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-vue-pug": "^0.6.2",
+    "eslint-plugin-vuetify": "^2.5.1",
     "json-cipher-value": "^3.0.1",
-    "pug": "^3.0.2",
-    "vite": "^4.4.7",
-    "vite-plugin-vuetify": "^1.0.2"
+    "pug": "^3.0.3",
+    "vite": "^6.0.11",
+    "vite-plugin-vuetify": "^2.0.4"
   },
   "repository": {
     "type": "git",
