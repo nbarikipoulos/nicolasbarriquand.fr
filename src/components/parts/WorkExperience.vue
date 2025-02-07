@@ -21,12 +21,12 @@ v-timeline(
     :key="i"
     dot-color="accent"
     icon="mdi-calendar-outline"
-    :hide-dot="item.type === 'project'"
+    :hide-dot="item.type !== 'event'"
   )
     template(#[getTargetSlot(i+1)])
       div(
         v-if="item.type === 'event'"
-        class="d-none d-md-block text-h6 font-weight-bold text-primary"
+        class="d-none d-md-block text-h6 text-right font-weight-bold text-primary"
         v-text="formatDate(item.date, 'long')"
       )
     template(#[getTargetSlot(i)])
@@ -37,7 +37,7 @@ v-timeline(
         p
           span(class="d-md-none text-primary font-weight-bold m-1 ") {{ formatDate(item.date, 'short') }}
           span(class="d-md-none") :&nbsp;
-          span(class="text-primary-darken-1") {{ item.desc }}
+          span(class="text-primary-darken-1 text-center") {{ item.desc }}
       project(
         v-else
         :content="item"
