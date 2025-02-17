@@ -1,6 +1,7 @@
 <template lang="pug">
 v-img(
   cover
+  min-height="200"
   :src="cpc"
 )
   div(
