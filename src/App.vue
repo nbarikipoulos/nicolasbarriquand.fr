@@ -21,11 +21,19 @@ v-app
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import { Home, About, Expertise, Contact, WorkExperience } from '@/components/parts'
 import MyFooter from '@/components/Footer.vue'
 import Navigation from '@/components/Navigation.vue'
 
 import json from '@/data/data.json'
+
+const headerContent = json['html']
+
+useHead({
+  title: headerContent.title,
+  meta: headerContent.meta
+})
 
 const getContent = (id) => json.parts[id]
 
